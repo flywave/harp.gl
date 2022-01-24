@@ -286,12 +286,12 @@ exports.PerformanceUtils = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const harp_map_controls_1 = __webpack_require__(/*! @here/harp-map-controls */ "../harp-map-controls/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const DebugContext_1 = __webpack_require__(/*! @here/harp-mapview/lib/DebugContext */ "../harp-mapview/lib/DebugContext.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
 const THREE = __webpack_require__(/*! three */ "three");
 const config_1 = __webpack_require__(/*! ../config */ "./config.ts");
@@ -826,8 +826,8 @@ var PerformanceUtils;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PerformanceBenchmark = void 0;
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const dat_gui_1 = __webpack_require__(/*! dat.gui */ "../../node_modules/dat.gui/build/dat.gui.module.js");
 const PerformanceConfig_1 = __webpack_require__(/*! ../lib/PerformanceConfig */ "./lib/PerformanceConfig.ts");
 const PerformanceUtils_1 = __webpack_require__(/*! ../lib/PerformanceUtils */ "./lib/PerformanceUtils.ts");

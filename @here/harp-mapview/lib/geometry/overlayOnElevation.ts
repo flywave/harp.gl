@@ -22,7 +22,7 @@ import { Tile, TileObject } from "../Tile";
  * @param object - The object to be overlaid.
  * @param displacementMap - Texture representing the elevation data used to overlay the object.
  */
-function overlayObject(object: TileObject, displacementMap: THREE.DataTexture): void {
+function overlayObject(object: TileObject, displacementMap: TileDisplacementMap): void {
     if (!("material" in object)) {
         return;
     }
@@ -145,6 +145,6 @@ export function overlayOnElevation(tile: Tile): void {
 
     // TODO: HARP-8808 Apply displacement maps once per material.
     for (const object of tile.objects) {
-        overlayObject(object, displacementMap.texture);
+        overlayObject(object, displacementMap);
     }
 }

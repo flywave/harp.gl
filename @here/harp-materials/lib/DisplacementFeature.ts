@@ -5,7 +5,7 @@
  */
 
 import { HiddenThreeJSMaterialProperties } from "./MapMeshMaterials";
-
+import { TileDisplacementMap } from "@here/harp-mapview";
 /**
  * Parameters used when constructing a new implementor of {@link DisplacementFeature}.
  */
@@ -14,6 +14,7 @@ export interface DisplacementFeatureParameters {
      * Texture used for vertex displacement along their normals.
      */
     displacementMap?: THREE.Texture;
+    displacementMapUvMatrix?:THREE.Matrix3;
 }
 
 /**
@@ -39,11 +40,12 @@ export function hasDisplacementFeature(material: any): material is DisplacementF
  * @param material - The Material to be updated.
  */
 export function setDisplacementMapToMaterial(
-    displacementMap: THREE.DataTexture | null,
+    displacementMap: TileDisplacementMap | null,
     material: THREE.Mesh["material"]
 ) {
     if (hasDisplacementFeature(material) && material.displacementMap !== displacementMap) {
-        material.displacementMap = displacementMap;
+        material.displacementMap = displacementMap?.texture as THREE.Texture;
+        (material as any).displacementMapUvMatrix = displacementMap?.uvMatrix
         material.needsUpdate = true;
         if (material.displacementMap !== null) {
             material.displacementMap.needsUpdate = true;

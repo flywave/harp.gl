@@ -46,6 +46,7 @@ uniform float edgeColorMix;
 attribute vec3 normal;
 attribute vec2 uv;
 uniform sampler2D displacementMap;
+uniform mat3 displacementMapUvMatrix;
 #endif
 
 varying vec3 vColor;
@@ -68,8 +69,8 @@ void main() {
     #include <extrusion_vertex>
     #endif
 
-    #ifdef USE_DISPLACEMENTMAP
-    transformed += normalize( normal ) * texture2D( displacementMap, uv ).x;
+    #ifdef USE_DISPLACEMENTMAP 
+    transformed += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * vec3(uv,1.0)).xy ).x;
     #endif
 
     vec4 mvPosition = modelViewMatrix * vec4( transformed, 1.0 );
@@ -184,7 +185,8 @@ export class EdgeMaterial
                     extrusionRatio: new THREE.Uniform(ExtrusionFeatureDefs.DEFAULT_RATIO_MAX),
                     displacementMap: new THREE.Uniform(
                         params.displacementMap ?? new THREE.Texture()
-                    )
+                    ),
+                    displacementMapUvMatrix: new THREE.Uniform(params.displacementMapUvMatrix),
                 },
                 depthWrite: false,
                 defines,
@@ -216,6 +218,7 @@ export class EdgeMaterial
             }
             if (params.displacementMap !== undefined) {
                 this.displacementMap = params.displacementMap;
+                this.displacementMapUvMatrix = params.displacementMapUvMatrix;
             }
             if (params.extrusionRatio !== undefined) {
                 this.extrusionRatio = params.extrusionRatio;
@@ -337,5 +340,13 @@ export class EdgeMaterial
             this.uniforms.displacementMap.value.needsUpdate = true;
         }
         setShaderMaterialDefine(this, "USE_DISPLACEMENTMAP", useDisplacementMap);
+    }
+
+    get displacementMapUvMatrix(){
+        return this.uniforms.displacementMapUvMatrix.value;
+    }
+    
+    set displacementMapUvMatrix(matrix){ 
+        this.uniforms.displacementMapUvMatrix.value = matrix;
     }
 }

@@ -17,9 +17,9 @@ exports.RealTimeShadows = void 0;
  * SPDX-License-Identifier: Apache-2.0
  */
 __webpack_require__(/*! three/examples/js/controls/TrackballControls */ "../../node_modules/three/examples/js/controls/TrackballControls.js");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const harp_map_controls_1 = __webpack_require__(/*! @here/harp-map-controls */ "../harp-map-controls/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
 const harp_webtile_datasource_1 = __webpack_require__(/*! @here/harp-webtile-datasource */ "../harp-webtile-datasource/index.ts");
 const dat_gui_1 = __webpack_require__(/*! dat.gui */ "../../node_modules/dat.gui/build/dat.gui.module.js");

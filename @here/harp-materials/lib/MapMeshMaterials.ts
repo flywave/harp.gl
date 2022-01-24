@@ -1182,15 +1182,38 @@ export class MapMeshStandardMaterial
         this.addExtrusionProperties();
         this.applyExtrusionParameters({ ...params, zFightingWorkaround: true });
 
-        if (params?.removeDiffuseLight === true) {
-            this.onBeforeCompile = chainCallbacks(this.onBeforeCompile, shaderParameters => {
-                const shader = shaderParameters as THREE.Shader;
+        let _this = this;
+        this.onBeforeCompile = chainCallbacks(this.onBeforeCompile, shaderParameters => {
+            const shader = shaderParameters as THREE.Shader;
+            if (params?.removeDiffuseLight === true) {
                 shader.fragmentShader = THREE.ShaderChunk.meshphysical_frag.replace(
                     "#include <lights_physical_pars_fragment>",
                     simpleLightingShadowChunk
                 );
-            });
-        }
+            }
+            shader.vertexShader = shader.vertexShader.replace(
+                "#include <displacementmap_pars_vertex>",
+                `#ifdef USE_DISPLACEMENTMAP
+
+                uniform mat3 displacementUvMat;
+                uniform sampler2D displacementMap;
+                uniform float displacementScale;
+                uniform float displacementBias;
+            
+                #endif`
+            );
+
+            shader.vertexShader = shader.vertexShader.replace(
+                "#include <displacementmap_vertex>",
+                `#ifdef USE_DISPLACEMENTMAP 
+                transformed += normalize( objectNormal ) * ( texture2D( displacementMap, (displacementUvMat*vec3(uv,1.0)).xy ).x * displacementScale + displacementBias );
+                #endif`
+            );
+
+            shader.uniforms.displacementUvMat = { value : (_this as any).displacementMapUvMatrix||new THREE.Matrix3};
+
+            (_this as any).displacementUvMat = shader.uniforms.displacementUvMat;
+        });
     }
 
     // overrides with THREE.js base classes are not recognized by tslint.
@@ -1252,6 +1275,16 @@ export class MapMeshStandardMaterial
     /** @internal */
     set removeDiffuseLight(val: boolean) {
         // Stays empty.
+    }
+
+    set displacementMapUvMatrix(matrix: THREE.Matrix3){
+        (this as any).uVMat = matrix;
+        if((this as any).displacementUvMat)
+        (this as any).displacementUvMat.value = matrix;
+    }
+
+    get displacementMapUvMatrix(){
+        return (this as any).uVMat
     }
 
     protected addFadingProperties(): void {

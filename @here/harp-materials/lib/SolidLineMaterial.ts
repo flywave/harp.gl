@@ -91,6 +91,7 @@ uniform vec2 drawRange;
 
 #ifdef USE_DISPLACEMENTMAP
 uniform sampler2D displacementMap;
+uniform mat3 displacementMapUvMatrix;
 #endif
 
 #ifdef USE_TILE_CLIP
@@ -146,7 +147,7 @@ void main() {
 
     // Transform position.
     #ifdef USE_DISPLACEMENTMAP
-    pos += normalize( normal ) * texture2D( displacementMap, uv ).x;
+    pos += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * vec3(uv,1.0)).xy ).x;
     #endif
 
     // Shift the line based on the offset, where the bitangent is the cross product of the average
@@ -490,6 +491,7 @@ export class SolidLineMaterial
                         displacementMap: new THREE.Uniform(
                             displacementMap !== undefined ? displacementMap : new THREE.Texture()
                         ),
+                        displacementMapUvMatrix: new THREE.Uniform(params.displacementMapUvMatrix),
                         drawRange: new THREE.Uniform(
                             new THREE.Vector2(
                                 SolidLineMaterial.DEFAULT_DRAW_RANGE_START,
@@ -562,6 +564,7 @@ export class SolidLineMaterial
             }
             if (params.displacementMap !== undefined) {
                 this.displacementMap = params.displacementMap;
+                this.displacementMapUvMatrix = params.displacementMapUvMatrix;
             }
             if (params.caps !== undefined) {
                 this.caps = params.caps;
@@ -798,6 +801,14 @@ export class SolidLineMaterial
             this.uniforms.displacementMap.value.needsUpdate = true;
         }
         setShaderMaterialDefine(this, "USE_DISPLACEMENTMAP", useDisplacementMap);
+    }
+
+    get displacementMapUvMatrix(){
+        return this.uniforms.displacementMapUvMatrix.value;
+    }
+    
+    set displacementMapUvMatrix(matrix){ 
+        this.uniforms.displacementMapUvMatrix.value = matrix;
     }
 
     get drawRangeStart(): number {

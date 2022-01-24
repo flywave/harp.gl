@@ -1011,7 +1011,7 @@ module.exports = $root;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GeoJsonVisibilityExample = void 0;
 const harp_map_controls_1 = __webpack_require__(/*! @here/harp-map-controls */ "../harp-map-controls/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const GeoJsonTiler_1 = __webpack_require__(/*! @here/harp-mapview-decoder/lib/GeoJsonTiler */ "../harp-mapview-decoder/lib/GeoJsonTiler.ts");
 const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
 const index_worker_1 = __webpack_require__(/*! @here/harp-vectortile-datasource/index-worker */ "../harp-vectortile-datasource/index-worker.ts");
@@ -1114,8 +1114,8 @@ var GeoJsonVisibilityExample;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.wrapLineString = exports.clipLineString = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 /**
  * A clipping edge.
@@ -1544,7 +1544,7 @@ __exportStar(__webpack_require__(/*! ./lib/GeoJsonTiler */ "../harp-mapview-deco
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GeoJsonTiler = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 // @ts-ignore
 const geojsonvtExport = __webpack_require__(/*! geojson-vt */ "../../node_modules/geojson-vt/src/index.js");
 // to be able to run tests on nodejs
@@ -1630,7 +1630,7 @@ exports.GeoJsonTiler = GeoJsonTiler;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ThemedTileDecoder = void 0;
 const index_decoder_1 = __webpack_require__(/*! @here/harp-datasource-protocol/index-decoder */ "../harp-datasource-protocol/index-decoder.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("ThemedTileDecoder");
 /**
  * `ThemedTileDecoder` implements an [[ITileDecoder]] which uses a [[Theme]] to apply styles to the
@@ -1687,9 +1687,9 @@ exports.ThemedTileDecoder = ThemedTileDecoder;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TileDecoderService = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const WorkerService_1 = __webpack_require__(/*! ./WorkerService */ "../harp-mapview-decoder/lib/WorkerService.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("TileDecoderService");
 /**
@@ -1831,8 +1831,8 @@ exports.TileDecoderService = TileDecoderService;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TilerService = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const GeoJsonTiler_1 = __webpack_require__(/*! ./GeoJsonTiler */ "../harp-mapview-decoder/lib/GeoJsonTiler.ts");
 const WorkerService_1 = __webpack_require__(/*! ./WorkerService */ "../harp-mapview-decoder/lib/WorkerService.ts");
 /**
@@ -1924,8 +1924,8 @@ exports.TilerService = TilerService;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WorkerService = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("WorkerService", { enabled: true });
 /**
  * Worker Service communication helper.
@@ -2094,7 +2094,7 @@ exports.WorkerService = WorkerService;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WorkerServiceManager = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const WorkerService_1 = __webpack_require__(/*! ./WorkerService */ "../harp-mapview-decoder/lib/WorkerService.ts");
 /**
  * Manages dynamic worker services in Web Worker context.
@@ -2225,7 +2225,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DecodeInfo = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 class DecodeInfo {
     /**
@@ -2347,7 +2347,7 @@ exports.GeoJsonTilerService = GeoJsonTilerService;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OmvPoliticalViewFeatureModifier = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("OmvPoliticalViewFeatureModifier");
 /**
  * Modifies the MapEnv of the Vector Tiles in Tilezen format with different POV.
@@ -2461,7 +2461,7 @@ exports.webMercatorTile2TargetTile = exports.webMercatorTile2TargetWorld = expor
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 /**
  * @hidden
@@ -2722,16 +2722,16 @@ exports.VectorTileDataEmitter = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const TechniqueAttr_1 = __webpack_require__(/*! @here/harp-datasource-protocol/lib/TechniqueAttr */ "../harp-datasource-protocol/lib/TechniqueAttr.ts");
 const ClipPolygon_1 = __webpack_require__(/*! @here/harp-geometry/lib/ClipPolygon */ "../harp-geometry/lib/ClipPolygon.ts");
 const EdgeLengthGeometrySubdivisionModifier_1 = __webpack_require__(/*! @here/harp-geometry/lib/EdgeLengthGeometrySubdivisionModifier */ "../harp-geometry/lib/EdgeLengthGeometrySubdivisionModifier.ts");
 const SphericalGeometrySubdivisionModifier_1 = __webpack_require__(/*! @here/harp-geometry/lib/SphericalGeometrySubdivisionModifier */ "../harp-geometry/lib/SphericalGeometrySubdivisionModifier.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const Lines_1 = __webpack_require__(/*! @here/harp-lines/lib/Lines */ "../harp-lines/lib/Lines.ts");
 const TriangulateLines_1 = __webpack_require__(/*! @here/harp-lines/lib/TriangulateLines */ "../harp-lines/lib/TriangulateLines.ts");
 const MapMeshMaterialsDefs_1 = __webpack_require__(/*! @here/harp-materials/lib/MapMeshMaterialsDefs */ "../harp-materials/lib/MapMeshMaterialsDefs.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const earcut_1 = __webpack_require__(/*! earcut */ "../../node_modules/earcut/src/earcut.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const OmvUtils_1 = __webpack_require__(/*! ./OmvUtils */ "../harp-vectortile-datasource/lib/OmvUtils.ts");
@@ -4196,14 +4196,14 @@ exports.VectorTileDataEmitter = VectorTileDataEmitter;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.VectorTileDecoderService = exports.VectorTileDecoder = exports.VectorTileDataProcessor = void 0;
 /*
- * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Copyright (C) 2019-2022 HERE Europe B.V.
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const index_decoder_1 = __webpack_require__(/*! @here/harp-datasource-protocol/index-decoder */ "../harp-datasource-protocol/index-decoder.ts");
 const index_worker_1 = __webpack_require__(/*! @here/harp-mapview-decoder/index-worker */ "../harp-mapview-decoder/index-worker.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const GeoJsonDataAdapter_1 = __webpack_require__(/*! ./adapters/geojson/GeoJsonDataAdapter */ "../harp-vectortile-datasource/lib/adapters/geojson/GeoJsonDataAdapter.ts");
 const GeoJsonVtDataAdapter_1 = __webpack_require__(/*! ./adapters/geojson-vt/GeoJsonVtDataAdapter */ "../harp-vectortile-datasource/lib/adapters/geojson-vt/GeoJsonVtDataAdapter.ts");
 const OmvDataAdapter_1 = __webpack_require__(/*! ./adapters/omv/OmvDataAdapter */ "../harp-vectortile-datasource/lib/adapters/omv/OmvDataAdapter.ts");
@@ -4266,8 +4266,7 @@ class VectorTileDataProcessor {
         }
         const context = {
             env,
-            // Reuse expressions cached on previous call to getMatchingTechniques.
-            cachedExprResults: this.m_styleSetEvaluator.expressionEvaluatorCache
+            cachedExprResults: new Map()
         };
         if (this.m_decodedTileEmitter) {
             emitterFunc.apply(this.m_decodedTileEmitter, [
@@ -4395,7 +4394,7 @@ exports.VectorTileDecoderService = VectorTileDecoderService;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GeoJsonVtDataAdapter = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const OmvUtils_1 = __webpack_require__(/*! ../../OmvUtils */ "../harp-vectortile-datasource/lib/OmvUtils.ts");
 const VT_JSON_EXTENTS = 4096;
@@ -4523,7 +4522,7 @@ exports.GeoJsonVtDataAdapter = GeoJsonVtDataAdapter;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GeoJsonDataAdapter = void 0;
 const ClipLineString_1 = __webpack_require__(/*! @here/harp-geometry/lib/ClipLineString */ "../harp-geometry/lib/ClipLineString.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const OmvUtils_1 = __webpack_require__(/*! ../../OmvUtils */ "../harp-vectortile-datasource/lib/OmvUtils.ts");
 const DEFAULT_EXTENTS = 4 * 1024;
@@ -4818,7 +4817,7 @@ exports.GeometryCommands = GeometryCommands;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OmvDataAdapter = exports.asGeometryType = void 0;
 const index_decoder_1 = __webpack_require__(/*! @here/harp-datasource-protocol/index-decoder */ "../harp-datasource-protocol/index-decoder.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const Long = __webpack_require__(/*! long */ "../../node_modules/long/src/long.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const OmvDataFilter_1 = __webpack_require__(/*! ../../OmvDataFilter */ "../harp-vectortile-datasource/lib/OmvDataFilter.ts");

@@ -17,4 +17,5 @@ export interface TileDisplacementMap {
     texture: THREE.DataTexture;
     displacementMap: DisplacementMap;
     geoBox: GeoBox;
+    uvMatrix?: THREE.Matrix3;
 }

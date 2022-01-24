@@ -1,5 +1,307 @@
 (self["webpackChunk_here_harp_examples"] = self["webpackChunk_here_harp_examples"] || []).push([["common"],{
 
+/***/ "../harp-datasource-protocol/index.js":
+/*!********************************************!*\
+  !*** ../harp-datasource-protocol/index.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * Components used for the decoding and styling of data that is used by the Datasources.
+ *
+ * @remarks
+ * The DataSource Protocol package contains components used for the decoding and styling
+ * of data that is used by the Datasources.
+ * This code is shared between the ui-thread and the web-workers which are
+ * used to parallelise the decoding of the data.
+ * This module contains interfaces for choosing techniques form the techniques
+ * catalog that are applied via the {@link Theme} files to draw geometries on the map canvas.
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./lib/ColorUtils */ "../harp-datasource-protocol/lib/ColorUtils.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/Expr */ "../harp-datasource-protocol/lib/Expr.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/Techniques */ "../harp-datasource-protocol/lib/Techniques.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/TechniqueParams */ "../harp-datasource-protocol/lib/TechniqueParams.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/Theme */ "../harp-datasource-protocol/lib/Theme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/PostEffects */ "../harp-datasource-protocol/lib/PostEffects.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/PropertyValue */ "../harp-datasource-protocol/lib/PropertyValue.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/InterpolatedPropertyDefs */ "../harp-datasource-protocol/lib/InterpolatedPropertyDefs.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/WorkerServiceProtocol */ "../harp-datasource-protocol/lib/WorkerServiceProtocol.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/WorkerTilerProtocol */ "../harp-datasource-protocol/lib/WorkerTilerProtocol.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/WorkerDecoderProtocol */ "../harp-datasource-protocol/lib/WorkerDecoderProtocol.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ITileDecoder */ "../harp-datasource-protocol/lib/ITileDecoder.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ITiler */ "../harp-datasource-protocol/lib/ITiler.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/DecodedTile */ "../harp-datasource-protocol/lib/DecodedTile.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/TileInfo */ "../harp-datasource-protocol/lib/TileInfo.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/GeoJsonDataType */ "../harp-datasource-protocol/lib/GeoJsonDataType.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ThemeVisitor */ "../harp-datasource-protocol/lib/ThemeVisitor.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/StringEncodedNumeral */ "../harp-datasource-protocol/lib/StringEncodedNumeral.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../harp-fetch/index.web.js":
+/*!**********************************!*\
+  !*** ../harp-fetch/index.web.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+//# sourceMappingURL=index.web.js.map
+
+/***/ }),
+
+/***/ "../harp-geoutils/index.js":
+/*!*********************************!*\
+  !*** ../harp-geoutils/index.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * Utility classes for working with geospatial data.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoBox */ "../harp-geoutils/lib/coordinates/GeoBox.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoBoxExtentLike */ "../harp-geoutils/lib/coordinates/GeoBoxExtentLike.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoCoordinatesLike */ "../harp-geoutils/lib/coordinates/GeoCoordinatesLike.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoCoordinates */ "../harp-geoutils/lib/coordinates/GeoCoordinates.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoPointLike */ "../harp-geoutils/lib/coordinates/GeoPointLike.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoPolygonLike */ "../harp-geoutils/lib/coordinates/GeoPolygonLike.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoPolygon */ "../harp-geoutils/lib/coordinates/GeoPolygon.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/coordinates/LatLngLike */ "../harp-geoutils/lib/coordinates/LatLngLike.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/projection/EarthConstants */ "../harp-geoutils/lib/projection/EarthConstants.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/projection/EquirectangularProjection */ "../harp-geoutils/lib/projection/EquirectangularProjection.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/projection/IdentityProjection */ "../harp-geoutils/lib/projection/IdentityProjection.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/projection/Projection */ "../harp-geoutils/lib/projection/Projection.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/projection/MercatorProjection */ "../harp-geoutils/lib/projection/MercatorProjection.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/projection/TransverseMercatorProjection */ "../harp-geoutils/lib/projection/TransverseMercatorProjection.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/projection/SphereProjection */ "../harp-geoutils/lib/projection/SphereProjection.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/FlatTileBoundingBoxGenerator */ "../harp-geoutils/lib/tiling/FlatTileBoundingBoxGenerator.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/HalfQuadTreeSubdivisionScheme */ "../harp-geoutils/lib/tiling/HalfQuadTreeSubdivisionScheme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/QuadTreeSubdivisionScheme */ "../harp-geoutils/lib/tiling/QuadTreeSubdivisionScheme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/QuadTree */ "../harp-geoutils/lib/tiling/QuadTree.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/SubTiles */ "../harp-geoutils/lib/tiling/SubTiles.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/SubdivisionScheme */ "../harp-geoutils/lib/tiling/SubdivisionScheme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/TileKey */ "../harp-geoutils/lib/tiling/TileKey.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/TileKeyUtils */ "../harp-geoutils/lib/tiling/TileKeyUtils.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/TileTreeTraverse */ "../harp-geoutils/lib/tiling/TileTreeTraverse.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/TilingScheme */ "../harp-geoutils/lib/tiling/TilingScheme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/HereTilingScheme */ "../harp-geoutils/lib/tiling/HereTilingScheme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/WebMercatorTilingScheme */ "../harp-geoutils/lib/tiling/WebMercatorTilingScheme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/MercatorTilingScheme */ "../harp-geoutils/lib/tiling/MercatorTilingScheme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/tiling/PolarTilingScheme */ "../harp-geoutils/lib/tiling/PolarTilingScheme.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/math/Vector2Like */ "../harp-geoutils/lib/math/Vector2Like.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/math/Vector3Like */ "../harp-geoutils/lib/math/Vector3Like.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/math/Box3Like */ "../harp-geoutils/lib/math/Box3Like.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/math/OrientedBox3Like */ "../harp-geoutils/lib/math/OrientedBox3Like.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/math/MathUtils */ "../harp-geoutils/lib/math/MathUtils.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/math/TransformLike */ "../harp-geoutils/lib/math/TransformLike.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/math/OrientedBox3 */ "../harp-geoutils/lib/math/OrientedBox3.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../harp-lines/index.js":
+/*!******************************!*\
+  !*** ../harp-lines/index.js ***!
+  \******************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(/*! ./lib/Lines */ "../harp-lines/lib/Lines.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/TriangulateLines */ "../harp-lines/lib/TriangulateLines.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/HighPrecisionLines */ "../harp-lines/lib/HighPrecisionLines.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/HighPrecisionUtils */ "../harp-lines/lib/HighPrecisionUtils.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../harp-lrucache/index.js":
+/*!*********************************!*\
+  !*** ../harp-lrucache/index.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * LRU cache.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./lib/LRUCache */ "../harp-lrucache/lib/LRUCache.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../harp-mapview/index.js":
+/*!********************************!*\
+  !*** ../harp-mapview/index.js ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * Functionality needed to render a map.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./lib/AnimatedExtrusionHandler */ "../harp-mapview/lib/AnimatedExtrusionHandler.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/BaseTileLoader */ "../harp-mapview/lib/BaseTileLoader.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/BoundsGenerator */ "../harp-mapview/lib/BoundsGenerator.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/CameraMovementDetector */ "../harp-mapview/lib/CameraMovementDetector.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/CameraUtils */ "../harp-mapview/lib/CameraUtils.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ClipPlanesEvaluator */ "../harp-mapview/lib/ClipPlanesEvaluator.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ColorCache */ "../harp-mapview/lib/ColorCache.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/composing */ "../harp-mapview/lib/composing/index.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ConcurrentDecoderFacade */ "../harp-mapview/lib/ConcurrentDecoderFacade.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ConcurrentTilerFacade */ "../harp-mapview/lib/ConcurrentTilerFacade.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/copyrights/CopyrightElementHandler */ "../harp-mapview/lib/copyrights/CopyrightElementHandler.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/copyrights/CopyrightInfo */ "../harp-mapview/lib/copyrights/CopyrightInfo.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/copyrights/CopyrightProvider */ "../harp-mapview/lib/copyrights/CopyrightProvider.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/copyrights/CopyrightCoverageProvider */ "../harp-mapview/lib/copyrights/CopyrightCoverageProvider.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/copyrights/UrlCopyrightProvider */ "../harp-mapview/lib/copyrights/UrlCopyrightProvider.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/DataSource */ "../harp-mapview/lib/DataSource.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/EventDispatcher */ "../harp-mapview/lib/EventDispatcher.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/FixedClipPlanesEvaluator */ "../harp-mapview/lib/FixedClipPlanesEvaluator.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/FovCalculation */ "../harp-mapview/lib/FovCalculation.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/PolarTileDataSource */ "../harp-mapview/lib/PolarTileDataSource.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/DecodedTileHelpers */ "../harp-mapview/lib/DecodedTileHelpers.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/DepthPrePass */ "../harp-mapview/lib/DepthPrePass.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/DisplacementMap */ "../harp-mapview/lib/DisplacementMap.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ElevationProvider */ "../harp-mapview/lib/ElevationProvider.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ElevationRangeSource */ "../harp-mapview/lib/ElevationRangeSource.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ITileLoader */ "../harp-mapview/lib/ITileLoader.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/image/Image */ "../harp-mapview/lib/image/Image.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/image/ImageCache */ "../harp-mapview/lib/image/ImageCache.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/image/MapViewImageCache */ "../harp-mapview/lib/image/MapViewImageCache.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/MapAnchors */ "../harp-mapview/lib/MapAnchors.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/MapView */ "../harp-mapview/lib/MapView.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/MapViewAtmosphere */ "../harp-mapview/lib/MapViewAtmosphere.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/MapViewFog */ "../harp-mapview/lib/MapViewFog.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/MapViewPoints */ "../harp-mapview/lib/MapViewPoints.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/PickHandler */ "../harp-mapview/lib/PickHandler.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/poi/PoiManager */ "../harp-mapview/lib/poi/PoiManager.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/poi/PoiTableManager */ "../harp-mapview/lib/poi/PoiTableManager.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/Statistics */ "../harp-mapview/lib/Statistics.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/text/TextElement */ "../harp-mapview/lib/text/TextElement.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/text/TextElementsRenderer */ "../harp-mapview/lib/text/TextElementsRenderer.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/text/TextStyleCache */ "../harp-mapview/lib/text/TextStyleCache.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/TextureLoader */ "../harp-mapview/lib/TextureLoader.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/ThemeLoader */ "../harp-mapview/lib/ThemeLoader.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/Tile */ "../harp-mapview/lib/Tile.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/geometry/TileDataAccessor */ "../harp-mapview/lib/geometry/TileDataAccessor.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/geometry/TileGeometry */ "../harp-mapview/lib/geometry/TileGeometry.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/Utils */ "../harp-mapview/lib/Utils.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/VisibleTileSet */ "../harp-mapview/lib/VisibleTileSet.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/WorkerBasedDecoder */ "../harp-mapview/lib/WorkerBasedDecoder.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/WorkerBasedTiler */ "../harp-mapview/lib/WorkerBasedTiler.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/workers/WorkerLoader */ "../harp-mapview/lib/workers/WorkerLoader.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
 /***/ "../harp-mapview/node_modules/rbush/rbush.min.js":
 /*!*******************************************************!*\
   !*** ../harp-mapview/node_modules/rbush/rbush.min.js ***!
@@ -8,6 +310,176 @@
 
 !function(t,i){ true?module.exports=i():0}(this,function(){"use strict";function t(t,r,e,a,h){!function t(n,r,e,a,h){for(;a>e;){if(a-e>600){var o=a-e+1,s=r-e+1,l=Math.log(o),f=.5*Math.exp(2*l/3),u=.5*Math.sqrt(l*f*(o-f)/o)*(s-o/2<0?-1:1),m=Math.max(e,Math.floor(r-s*f/o+u)),c=Math.min(a,Math.floor(r+(o-s)*f/o+u));t(n,r,m,c,h)}var p=n[r],d=e,x=a;for(i(n,e,r),h(n[a],p)>0&&i(n,e,a);d<x;){for(i(n,d,x),d++,x--;h(n[d],p)<0;)d++;for(;h(n[x],p)>0;)x--}0===h(n[e],p)?i(n,e,x):i(n,++x,a),x<=r&&(e=x+1),r<=x&&(a=x-1)}}(t,r,e||0,a||t.length-1,h||n)}function i(t,i,n){var r=t[i];t[i]=t[n],t[n]=r}function n(t,i){return t<i?-1:t>i?1:0}var r=function(t){void 0===t&&(t=9),this._maxEntries=Math.max(4,t),this._minEntries=Math.max(2,Math.ceil(.4*this._maxEntries)),this.clear()};function e(t,i,n){if(!n)return i.indexOf(t);for(var r=0;r<i.length;r++)if(n(t,i[r]))return r;return-1}function a(t,i){h(t,0,t.children.length,i,t)}function h(t,i,n,r,e){e||(e=p(null)),e.minX=1/0,e.minY=1/0,e.maxX=-1/0,e.maxY=-1/0;for(var a=i;a<n;a++){var h=t.children[a];o(e,t.leaf?r(h):h)}return e}function o(t,i){return t.minX=Math.min(t.minX,i.minX),t.minY=Math.min(t.minY,i.minY),t.maxX=Math.max(t.maxX,i.maxX),t.maxY=Math.max(t.maxY,i.maxY),t}function s(t,i){return t.minX-i.minX}function l(t,i){return t.minY-i.minY}function f(t){return(t.maxX-t.minX)*(t.maxY-t.minY)}function u(t){return t.maxX-t.minX+(t.maxY-t.minY)}function m(t,i){return t.minX<=i.minX&&t.minY<=i.minY&&i.maxX<=t.maxX&&i.maxY<=t.maxY}function c(t,i){return i.minX<=t.maxX&&i.minY<=t.maxY&&i.maxX>=t.minX&&i.maxY>=t.minY}function p(t){return{children:t,height:1,leaf:!0,minX:1/0,minY:1/0,maxX:-1/0,maxY:-1/0}}function d(i,n,r,e,a){for(var h=[n,r];h.length;)if(!((r=h.pop())-(n=h.pop())<=e)){var o=n+Math.ceil((r-n)/e/2)*e;t(i,o,n,r,a),h.push(n,o,o,r)}}return r.prototype.all=function(){return this._all(this.data,[])},r.prototype.search=function(t){var i=this.data,n=[];if(!c(t,i))return n;for(var r=this.toBBox,e=[];i;){for(var a=0;a<i.children.length;a++){var h=i.children[a],o=i.leaf?r(h):h;c(t,o)&&(i.leaf?n.push(h):m(t,o)?this._all(h,n):e.push(h))}i=e.pop()}return n},r.prototype.collides=function(t){var i=this.data;if(!c(t,i))return!1;for(var n=[];i;){for(var r=0;r<i.children.length;r++){var e=i.children[r],a=i.leaf?this.toBBox(e):e;if(c(t,a)){if(i.leaf||m(t,a))return!0;n.push(e)}}i=n.pop()}return!1},r.prototype.load=function(t){if(!t||!t.length)return this;if(t.length<this._minEntries){for(var i=0;i<t.length;i++)this.insert(t[i]);return this}var n=this._build(t.slice(),0,t.length-1,0);if(this.data.children.length)if(this.data.height===n.height)this._splitRoot(this.data,n);else{if(this.data.height<n.height){var r=this.data;this.data=n,n=r}this._insert(n,this.data.height-n.height-1,!0)}else this.data=n;return this},r.prototype.insert=function(t){return t&&this._insert(t,this.data.height-1),this},r.prototype.clear=function(){return this.data=p([]),this},r.prototype.remove=function(t,i){if(!t)return this;for(var n,r,a,h=this.data,o=this.toBBox(t),s=[],l=[];h||s.length;){if(h||(h=s.pop(),r=s[s.length-1],n=l.pop(),a=!0),h.leaf){var f=e(t,h.children,i);if(-1!==f)return h.children.splice(f,1),s.push(h),this._condense(s),this}a||h.leaf||!m(h,o)?r?(n++,h=r.children[n],a=!1):h=null:(s.push(h),l.push(n),n=0,r=h,h=h.children[0])}return this},r.prototype.toBBox=function(t){return t},r.prototype.compareMinX=function(t,i){return t.minX-i.minX},r.prototype.compareMinY=function(t,i){return t.minY-i.minY},r.prototype.toJSON=function(){return this.data},r.prototype.fromJSON=function(t){return this.data=t,this},r.prototype._all=function(t,i){for(var n=[];t;)t.leaf?i.push.apply(i,t.children):n.push.apply(n,t.children),t=n.pop();return i},r.prototype._build=function(t,i,n,r){var e,h=n-i+1,o=this._maxEntries;if(h<=o)return a(e=p(t.slice(i,n+1)),this.toBBox),e;r||(r=Math.ceil(Math.log(h)/Math.log(o)),o=Math.ceil(h/Math.pow(o,r-1))),(e=p([])).leaf=!1,e.height=r;var s=Math.ceil(h/o),l=s*Math.ceil(Math.sqrt(o));d(t,i,n,l,this.compareMinX);for(var f=i;f<=n;f+=l){var u=Math.min(f+l-1,n);d(t,f,u,s,this.compareMinY);for(var m=f;m<=u;m+=s){var c=Math.min(m+s-1,u);e.children.push(this._build(t,m,c,r-1))}}return a(e,this.toBBox),e},r.prototype._chooseSubtree=function(t,i,n,r){for(;r.push(i),!i.leaf&&r.length-1!==n;){for(var e=1/0,a=1/0,h=void 0,o=0;o<i.children.length;o++){var s=i.children[o],l=f(s),u=(m=t,c=s,(Math.max(c.maxX,m.maxX)-Math.min(c.minX,m.minX))*(Math.max(c.maxY,m.maxY)-Math.min(c.minY,m.minY))-l);u<a?(a=u,e=l<e?l:e,h=s):u===a&&l<e&&(e=l,h=s)}i=h||i.children[0]}var m,c;return i},r.prototype._insert=function(t,i,n){var r=n?t:this.toBBox(t),e=[],a=this._chooseSubtree(r,this.data,i,e);for(a.children.push(t),o(a,r);i>=0&&e[i].children.length>this._maxEntries;)this._split(e,i),i--;this._adjustParentBBoxes(r,e,i)},r.prototype._split=function(t,i){var n=t[i],r=n.children.length,e=this._minEntries;this._chooseSplitAxis(n,e,r);var h=this._chooseSplitIndex(n,e,r),o=p(n.children.splice(h,n.children.length-h));o.height=n.height,o.leaf=n.leaf,a(n,this.toBBox),a(o,this.toBBox),i?t[i-1].children.push(o):this._splitRoot(n,o)},r.prototype._splitRoot=function(t,i){this.data=p([t,i]),this.data.height=t.height+1,this.data.leaf=!1,a(this.data,this.toBBox)},r.prototype._chooseSplitIndex=function(t,i,n){for(var r,e,a,o,s,l,u,m=1/0,c=1/0,p=i;p<=n-i;p++){var d=h(t,0,p,this.toBBox),x=h(t,p,n,this.toBBox),v=(e=d,a=x,o=void 0,s=void 0,l=void 0,u=void 0,o=Math.max(e.minX,a.minX),s=Math.max(e.minY,a.minY),l=Math.min(e.maxX,a.maxX),u=Math.min(e.maxY,a.maxY),Math.max(0,l-o)*Math.max(0,u-s)),M=f(d)+f(x);v<m?(m=v,r=p,c=M<c?M:c):v===m&&M<c&&(c=M,r=p)}return r||n-i},r.prototype._chooseSplitAxis=function(t,i,n){var r=t.leaf?this.compareMinX:s,e=t.leaf?this.compareMinY:l;this._allDistMargin(t,i,n,r)<this._allDistMargin(t,i,n,e)&&t.children.sort(r)},r.prototype._allDistMargin=function(t,i,n,r){t.children.sort(r);for(var e=this.toBBox,a=h(t,0,i,e),s=h(t,n-i,n,e),l=u(a)+u(s),f=i;f<n-i;f++){var m=t.children[f];o(a,t.leaf?e(m):m),l+=u(a)}for(var c=n-i-1;c>=i;c--){var p=t.children[c];o(s,t.leaf?e(p):p),l+=u(s)}return l},r.prototype._adjustParentBBoxes=function(t,i,n){for(var r=n;r>=0;r--)o(i[r],t)},r.prototype._condense=function(t){for(var i=t.length-1,n=void 0;i>=0;i--)0===t[i].children.length?i>0?(n=t[i-1].children).splice(n.indexOf(t[i]),1):this.clear():a(t[i],this.toBBox)},r});
 
+
+/***/ }),
+
+/***/ "../harp-materials/index.js":
+/*!**********************************!*\
+  !*** ../harp-materials/index.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * Materials defining the appearance of map objects.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./lib/CirclePointsMaterial */ "../harp-materials/lib/CirclePointsMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/CopyMaterial */ "../harp-materials/lib/CopyMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/DisplacementFeature */ "../harp-materials/lib/DisplacementFeature.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/EdgeMaterial */ "../harp-materials/lib/EdgeMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/GroundAtmosphereMaterial */ "../harp-materials/lib/GroundAtmosphereMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/HighPrecisionLineMaterial */ "../harp-materials/lib/HighPrecisionLineMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/HighPrecisionPointMaterial */ "../harp-materials/lib/HighPrecisionPointMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/IconMaterial */ "../harp-materials/lib/IconMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/LuminosityHighPassShader */ "../harp-materials/lib/LuminosityHighPassShader.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/MapMeshMaterialsDefs */ "../harp-materials/lib/MapMeshMaterialsDefs.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/MapMeshMaterials */ "../harp-materials/lib/MapMeshMaterials.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/MSAAMaterial */ "../harp-materials/lib/MSAAMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/RawShaderMaterial */ "../harp-materials/lib/RawShaderMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/SepiaShader */ "../harp-materials/lib/SepiaShader.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/SkyAtmosphereMaterial */ "../harp-materials/lib/SkyAtmosphereMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/SolidLineMaterial */ "../harp-materials/lib/SolidLineMaterial.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/Utils */ "../harp-materials/lib/Utils.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/VignetteShader */ "../harp-materials/lib/VignetteShader.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../harp-text-canvas/index.js":
+/*!************************************!*\
+  !*** ../harp-text-canvas/index.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * SDF based text rendering for TypeScript.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./lib/rendering/FontCatalog */ "../harp-text-canvas/lib/rendering/FontCatalog.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/rendering/GlyphData */ "../harp-text-canvas/lib/rendering/GlyphData.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/rendering/TextStyle */ "../harp-text-canvas/lib/rendering/TextStyle.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/rendering/TextBufferObject */ "../harp-text-canvas/lib/rendering/TextBufferObject.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/TextCanvas */ "../harp-text-canvas/lib/TextCanvas.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/utils/ContextualArabicConverter */ "../harp-text-canvas/lib/utils/ContextualArabicConverter.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/utils/MaterialUtils */ "../harp-text-canvas/lib/utils/MaterialUtils.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/utils/TypesettingUtils */ "../harp-text-canvas/lib/utils/TypesettingUtils.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/utils/UnicodeUtils */ "../harp-text-canvas/lib/utils/UnicodeUtils.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../harp-transfer-manager/index.js":
+/*!*****************************************!*\
+  !*** ../harp-transfer-manager/index.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * Provides a manager that orchestrates downloading URLs, particularly static map resources.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./src/TransferManager */ "../harp-transfer-manager/src/TransferManager.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../harp-utils/index.js":
+/*!******************************!*\
+  !*** ../harp-utils/index.js ***!
+  \******************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * Provides utilities: logging and debugging.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./index-common */ "../harp-utils/index-common.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/UrlPlatformUtils */ "../harp-utils/lib/UrlPlatformUtils.ts"), exports);
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -20308,65 +20780,6 @@ __exportStar(__webpack_require__(/*! ./lib/GeoJsonDataType */ "../harp-datasourc
 
 /***/ }),
 
-/***/ "../harp-datasource-protocol/index.ts":
-/*!********************************************!*\
-  !*** ../harp-datasource-protocol/index.ts ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * Components used for the decoding and styling of data that is used by the Datasources.
- *
- * @remarks
- * The DataSource Protocol package contains components used for the decoding and styling
- * of data that is used by the Datasources.
- * This code is shared between the ui-thread and the web-workers which are
- * used to parallelise the decoding of the data.
- * This module contains interfaces for choosing techniques form the techniques
- * catalog that are applied via the {@link Theme} files to draw geometries on the map canvas.
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./lib/ColorUtils */ "../harp-datasource-protocol/lib/ColorUtils.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/Expr */ "../harp-datasource-protocol/lib/Expr.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/Techniques */ "../harp-datasource-protocol/lib/Techniques.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/TechniqueParams */ "../harp-datasource-protocol/lib/TechniqueParams.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/Theme */ "../harp-datasource-protocol/lib/Theme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/PostEffects */ "../harp-datasource-protocol/lib/PostEffects.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/PropertyValue */ "../harp-datasource-protocol/lib/PropertyValue.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/InterpolatedPropertyDefs */ "../harp-datasource-protocol/lib/InterpolatedPropertyDefs.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/WorkerServiceProtocol */ "../harp-datasource-protocol/lib/WorkerServiceProtocol.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/WorkerTilerProtocol */ "../harp-datasource-protocol/lib/WorkerTilerProtocol.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/WorkerDecoderProtocol */ "../harp-datasource-protocol/lib/WorkerDecoderProtocol.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ITileDecoder */ "../harp-datasource-protocol/lib/ITileDecoder.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ITiler */ "../harp-datasource-protocol/lib/ITiler.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/DecodedTile */ "../harp-datasource-protocol/lib/DecodedTile.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/TileInfo */ "../harp-datasource-protocol/lib/TileInfo.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/GeoJsonDataType */ "../harp-datasource-protocol/lib/GeoJsonDataType.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ThemeVisitor */ "../harp-datasource-protocol/lib/ThemeVisitor.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/StringEncodedNumeral */ "../harp-datasource-protocol/lib/StringEncodedNumeral.ts"), exports);
-
-
-/***/ }),
-
 /***/ "../harp-datasource-protocol/lib/ColorUtils.ts":
 /*!*****************************************************!*\
   !*** ../harp-datasource-protocol/lib/ColorUtils.ts ***!
@@ -20382,7 +20795,7 @@ __exportStar(__webpack_require__(/*! ./lib/StringEncodedNumeral */ "../harp-data
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ColorUtils = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const RGBA_1 = __webpack_require__(/*! ./RGBA */ "../harp-datasource-protocol/lib/RGBA.ts");
 const SHIFT_TRANSPARENCY = 24;
@@ -20547,7 +20960,7 @@ var ColorUtils;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.scaleHeight = exports.getFeatureText = exports.getFeatureName = exports.getFeatureId = exports.getProjectionName = exports.getProjection = exports.GeometryType = exports.getArrayConstructor = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const Expr_1 = __webpack_require__(/*! ./Expr */ "../harp-datasource-protocol/lib/Expr.ts");
 const TechniqueAttr_1 = __webpack_require__(/*! ./TechniqueAttr */ "../harp-datasource-protocol/lib/TechniqueAttr.ts");
 const Techniques_1 = __webpack_require__(/*! ./Techniques */ "../harp-datasource-protocol/lib/Techniques.ts");
@@ -23479,7 +23892,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getPropertyValue = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const Expr_1 = __webpack_require__(/*! ./Expr */ "../harp-datasource-protocol/lib/Expr.ts");
 const Pixels_1 = __webpack_require__(/*! ./Pixels */ "../harp-datasource-protocol/lib/Pixels.ts");
 const RGBA_1 = __webpack_require__(/*! ./RGBA */ "../harp-datasource-protocol/lib/RGBA.ts");
@@ -23627,7 +24040,7 @@ exports.parseStringEncodedColor = exports.parseStringEncodedNumeral = exports.St
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 //@ts-ignore
 const csscolorparser_1 = __webpack_require__(/*! csscolorparser */ "../../node_modules/csscolorparser/csscolorparser.js");
 const ColorUtils_1 = __webpack_require__(/*! ./ColorUtils */ "../harp-datasource-protocol/lib/ColorUtils.ts");
@@ -23782,11 +24195,11 @@ function parseStringLiteral(text, formats, pixelToMeters = 1.0) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.makeDecodedTechnique = exports.StyleSetEvaluator = void 0;
 /*
- * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Copyright (C) 2019-2022 HERE Europe B.V.
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const Expr_1 = __webpack_require__(/*! ./Expr */ "../harp-datasource-protocol/lib/Expr.ts");
 const ExprPool_1 = __webpack_require__(/*! ./ExprPool */ "../harp-datasource-protocol/lib/ExprPool.ts");
 const InterpolatedPropertyDefs_1 = __webpack_require__(/*! ./InterpolatedPropertyDefs */ "../harp-datasource-protocol/lib/InterpolatedPropertyDefs.ts");
@@ -24052,14 +24465,6 @@ class StyleSetEvaluator {
     wantsFeature(layer, geometryType) {
         return (this.getOptimizedStyleSet(this.m_tmpOptimizedSubSetKey.set(layer, geometryType))
             .length > 0);
-    }
-    /**
-     * Get the expression evaluation cache, for further feature processing.
-     *
-     * This cache is cleared at the next `getMatchingTechniques` call.
-     */
-    get expressionEvaluatorCache() {
-        return this.m_cachedResults;
     }
     /**
      * Reset array of techniques.
@@ -26610,7 +27015,7 @@ exports.MathOperators = operators;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MiscOperators = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const Expr_1 = __webpack_require__(/*! ../Expr */ "../harp-datasource-protocol/lib/Expr.ts");
 function joinKeyValues(keys) {
     return keys.join("&");
@@ -27109,9 +27514,9 @@ exports.DebugTileDataSource = exports.DebugTile = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const debugMaterial = new THREE.LineBasicMaterial({
     color: 0xff0000,
@@ -27282,9 +27687,9 @@ exports.CUSTOM_DECODER_SERVICE_TYPE = "custom_example_decoder_service";
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HelloWorldExample = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const harp_map_controls_1 = __webpack_require__(/*! @here/harp-map-controls */ "../harp-map-controls/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
 const config_1 = __webpack_require__(/*! ../config */ "./config.ts");
 /**
@@ -27554,8 +27959,8 @@ exports.MapViewMultiPointFeature = MapViewMultiPointFeature;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.FeaturesDataSource = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("FeaturesDataSource");
 const NAME = "user-features-datasource";
@@ -27763,24 +28168,6 @@ exports.FeaturesDataSource = FeaturesDataSource;
 
 /***/ }),
 
-/***/ "../harp-fetch/index.web.ts":
-/*!**********************************!*\
-  !*** ../harp-fetch/index.web.ts ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-
-
-/***/ }),
-
 /***/ "../harp-geometry/lib/EdgeLengthGeometrySubdivisionModifier.ts":
 /*!*********************************************************************!*\
   !*** ../harp-geometry/lib/EdgeLengthGeometrySubdivisionModifier.ts ***!
@@ -27796,8 +28183,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.EdgeLengthGeometrySubdivisionModifier = exports.SubdivisionMode = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const SubdivisionModifier_1 = __webpack_require__(/*! ./SubdivisionModifier */ "../harp-geometry/lib/SubdivisionModifier.ts");
 const VERTEX_POSITION_CACHE = [new three_1.Vector3(), new three_1.Vector3()];
@@ -27929,7 +28316,7 @@ exports.EdgeLengthGeometrySubdivisionModifier = EdgeLengthGeometrySubdivisionMod
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SphericalGeometrySubdivisionModifier = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const SubdivisionModifier_1 = __webpack_require__(/*! ./SubdivisionModifier */ "../harp-geometry/lib/SubdivisionModifier.ts");
 const VERTEX_POSITION_CACHE = [new three_1.Vector3(), new three_1.Vector3(), new three_1.Vector3()];
@@ -28144,77 +28531,6 @@ class SubdivisionModifier {
     }
 }
 exports.SubdivisionModifier = SubdivisionModifier;
-
-
-/***/ }),
-
-/***/ "../harp-geoutils/index.ts":
-/*!*********************************!*\
-  !*** ../harp-geoutils/index.ts ***!
-  \*********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * Utility classes for working with geospatial data.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoBox */ "../harp-geoutils/lib/coordinates/GeoBox.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoBoxExtentLike */ "../harp-geoutils/lib/coordinates/GeoBoxExtentLike.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoCoordinatesLike */ "../harp-geoutils/lib/coordinates/GeoCoordinatesLike.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoCoordinates */ "../harp-geoutils/lib/coordinates/GeoCoordinates.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoPointLike */ "../harp-geoutils/lib/coordinates/GeoPointLike.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoPolygonLike */ "../harp-geoutils/lib/coordinates/GeoPolygonLike.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/coordinates/GeoPolygon */ "../harp-geoutils/lib/coordinates/GeoPolygon.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/coordinates/LatLngLike */ "../harp-geoutils/lib/coordinates/LatLngLike.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/projection/EarthConstants */ "../harp-geoutils/lib/projection/EarthConstants.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/projection/EquirectangularProjection */ "../harp-geoutils/lib/projection/EquirectangularProjection.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/projection/IdentityProjection */ "../harp-geoutils/lib/projection/IdentityProjection.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/projection/Projection */ "../harp-geoutils/lib/projection/Projection.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/projection/MercatorProjection */ "../harp-geoutils/lib/projection/MercatorProjection.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/projection/TransverseMercatorProjection */ "../harp-geoutils/lib/projection/TransverseMercatorProjection.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/projection/SphereProjection */ "../harp-geoutils/lib/projection/SphereProjection.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/FlatTileBoundingBoxGenerator */ "../harp-geoutils/lib/tiling/FlatTileBoundingBoxGenerator.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/HalfQuadTreeSubdivisionScheme */ "../harp-geoutils/lib/tiling/HalfQuadTreeSubdivisionScheme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/QuadTreeSubdivisionScheme */ "../harp-geoutils/lib/tiling/QuadTreeSubdivisionScheme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/QuadTree */ "../harp-geoutils/lib/tiling/QuadTree.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/SubTiles */ "../harp-geoutils/lib/tiling/SubTiles.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/SubdivisionScheme */ "../harp-geoutils/lib/tiling/SubdivisionScheme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/TileKey */ "../harp-geoutils/lib/tiling/TileKey.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/TileKeyUtils */ "../harp-geoutils/lib/tiling/TileKeyUtils.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/TileTreeTraverse */ "../harp-geoutils/lib/tiling/TileTreeTraverse.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/TilingScheme */ "../harp-geoutils/lib/tiling/TilingScheme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/HereTilingScheme */ "../harp-geoutils/lib/tiling/HereTilingScheme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/WebMercatorTilingScheme */ "../harp-geoutils/lib/tiling/WebMercatorTilingScheme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/MercatorTilingScheme */ "../harp-geoutils/lib/tiling/MercatorTilingScheme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/tiling/PolarTilingScheme */ "../harp-geoutils/lib/tiling/PolarTilingScheme.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/math/Vector2Like */ "../harp-geoutils/lib/math/Vector2Like.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/math/Vector3Like */ "../harp-geoutils/lib/math/Vector3Like.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/math/Box3Like */ "../harp-geoutils/lib/math/Box3Like.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/math/OrientedBox3Like */ "../harp-geoutils/lib/math/OrientedBox3Like.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/math/MathUtils */ "../harp-geoutils/lib/math/MathUtils.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/math/TransformLike */ "../harp-geoutils/lib/math/TransformLike.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/math/OrientedBox3 */ "../harp-geoutils/lib/math/OrientedBox3.ts"), exports);
 
 
 /***/ }),
@@ -32234,38 +32550,6 @@ exports.webMercatorTilingScheme = new TilingScheme_1.TilingScheme(QuadTreeSubdiv
 
 /***/ }),
 
-/***/ "../harp-lines/index.ts":
-/*!******************************!*\
-  !*** ../harp-lines/index.ts ***!
-  \******************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-__exportStar(__webpack_require__(/*! ./lib/Lines */ "../harp-lines/lib/Lines.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/TriangulateLines */ "../harp-lines/lib/TriangulateLines.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/HighPrecisionLines */ "../harp-lines/lib/HighPrecisionLines.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/HighPrecisionUtils */ "../harp-lines/lib/HighPrecisionUtils.ts"), exports);
-
-
-/***/ }),
-
 /***/ "../harp-lines/lib/HighPrecisionLines.ts":
 /*!***********************************************!*\
   !*** ../harp-lines/lib/HighPrecisionLines.ts ***!
@@ -32384,7 +32668,7 @@ exports.HighPrecisionLine = HighPrecisionLine;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HighPrecisionPoints = void 0;
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const HighPrecisionUtils_1 = __webpack_require__(/*! ./HighPrecisionUtils */ "../harp-lines/lib/HighPrecisionUtils.ts");
 /**
@@ -32466,7 +32750,7 @@ exports.HighPrecisionPoints = HighPrecisionPoints;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HighPrecisionUtils = void 0;
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const HPL = __webpack_require__(/*! ./HighPrecisionLines */ "../harp-lines/lib/HighPrecisionLines.ts");
 const HPP = __webpack_require__(/*! ./HighPrecisionPoints */ "../harp-lines/lib/HighPrecisionPoints.ts");
@@ -32741,7 +33025,7 @@ var HighPrecisionUtils;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LineGroup = exports.createSimpleLineGeometry = exports.createLineGeometry = exports.LineGeometry = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 // Preallocate temp variables used during line generation.
 const tmpV = new THREE.Vector3();
@@ -33276,42 +33560,6 @@ exports.reconstructLineWidth = reconstructLineWidth;
 
 /***/ }),
 
-/***/ "../harp-lrucache/index.ts":
-/*!*********************************!*\
-  !*** ../harp-lrucache/index.ts ***!
-  \*********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * LRU cache.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./lib/LRUCache */ "../harp-lrucache/lib/LRUCache.ts"), exports);
-
-
-/***/ }),
-
 /***/ "../harp-lrucache/lib/LRUCache.ts":
 /*!****************************************!*\
   !*** ../harp-lrucache/lib/LRUCache.ts ***!
@@ -33327,7 +33575,7 @@ __exportStar(__webpack_require__(/*! ./lib/LRUCache */ "../harp-lrucache/lib/LRU
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LRUCache = exports.Entry = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 /** @hidden */
 class Entry {
     constructor(key, value, size, newer, older) {
@@ -33761,7 +34009,7 @@ exports.CameraAnimationBuilder = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const CameraKeyTrackAnimation_1 = __webpack_require__(/*! ./CameraKeyTrackAnimation */ "../harp-map-controls/lib/CameraKeyTrackAnimation.ts");
 /**
@@ -33905,9 +34153,9 @@ exports.CameraKeyTrackAnimation = exports.ControlPoint = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const logger = harp_utils_1.LoggerManager.instance.create("CameraKeyTrackAnimation");
 const MIN_DISTANCE = 0;
@@ -34256,8 +34504,8 @@ exports.LongPressHandler = LongPressHandler;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CameraPanAnimation = exports.CameraRotationAnimation = exports.CameraAnimation = exports.InterpolationFunction = exports.EasingFunction = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const TWEEN = __webpack_require__(/*! @tweenjs/tween.js */ "../../node_modules/@tweenjs/tween.js/dist/tween.esm.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const MapControls_1 = __webpack_require__(/*! ./MapControls */ "../harp-map-controls/lib/MapControls.ts");
@@ -34677,8 +34925,8 @@ function checkSetupTween() {
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapControls = exports.EventNames = exports.TiltState = void 0;
-const geoUtils = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const geoUtils = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const utils = __webpack_require__(/*! ./Utils */ "../harp-map-controls/lib/Utils.ts");
 var State;
@@ -35817,8 +36065,8 @@ exports.MapControls = MapControls;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapControlsUI = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 /**
  * Base class to handle UI overlay elements.
  */
@@ -36313,7 +36561,7 @@ __exportStar(__webpack_require__(/*! ./lib/TileLoader */ "../harp-mapview-decode
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DataProvider = void 0;
-__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.ts");
+__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 /**
  * Interface for all `DataProvider` subclasses.
@@ -36367,9 +36615,9 @@ exports.DataProvider = DataProvider;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TileDataSource = exports.TileFactory = void 0;
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const ThemeLoader_1 = __webpack_require__(/*! @here/harp-mapview/lib/ThemeLoader */ "../harp-mapview/lib/ThemeLoader.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const TileLoader_1 = __webpack_require__(/*! ./TileLoader */ "../harp-mapview-decoder/lib/TileLoader.ts");
 /**
  * Templated factory class to create instances of [[Tile]].
@@ -36580,11 +36828,11 @@ exports.TileInfoLoader = exports.TileLoader = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.ts");
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const ITileLoader_1 = __webpack_require__(/*! @here/harp-mapview/lib/ITileLoader */ "../harp-mapview/lib/ITileLoader.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 /**
  * Logger to write to console etc.
  */
@@ -36767,92 +37015,6 @@ exports.TileInfoLoader = TileInfoLoader;
 
 /***/ }),
 
-/***/ "../harp-mapview/index.ts":
-/*!********************************!*\
-  !*** ../harp-mapview/index.ts ***!
-  \********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * Functionality needed to render a map.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./lib/AnimatedExtrusionHandler */ "../harp-mapview/lib/AnimatedExtrusionHandler.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/BaseTileLoader */ "../harp-mapview/lib/BaseTileLoader.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/BoundsGenerator */ "../harp-mapview/lib/BoundsGenerator.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/CameraMovementDetector */ "../harp-mapview/lib/CameraMovementDetector.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/CameraUtils */ "../harp-mapview/lib/CameraUtils.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ClipPlanesEvaluator */ "../harp-mapview/lib/ClipPlanesEvaluator.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ColorCache */ "../harp-mapview/lib/ColorCache.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/composing */ "../harp-mapview/lib/composing/index.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ConcurrentDecoderFacade */ "../harp-mapview/lib/ConcurrentDecoderFacade.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ConcurrentTilerFacade */ "../harp-mapview/lib/ConcurrentTilerFacade.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/copyrights/CopyrightElementHandler */ "../harp-mapview/lib/copyrights/CopyrightElementHandler.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/copyrights/CopyrightInfo */ "../harp-mapview/lib/copyrights/CopyrightInfo.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/copyrights/CopyrightProvider */ "../harp-mapview/lib/copyrights/CopyrightProvider.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/copyrights/CopyrightCoverageProvider */ "../harp-mapview/lib/copyrights/CopyrightCoverageProvider.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/copyrights/UrlCopyrightProvider */ "../harp-mapview/lib/copyrights/UrlCopyrightProvider.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/DataSource */ "../harp-mapview/lib/DataSource.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/EventDispatcher */ "../harp-mapview/lib/EventDispatcher.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/FixedClipPlanesEvaluator */ "../harp-mapview/lib/FixedClipPlanesEvaluator.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/FovCalculation */ "../harp-mapview/lib/FovCalculation.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/PolarTileDataSource */ "../harp-mapview/lib/PolarTileDataSource.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/DecodedTileHelpers */ "../harp-mapview/lib/DecodedTileHelpers.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/DepthPrePass */ "../harp-mapview/lib/DepthPrePass.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/DisplacementMap */ "../harp-mapview/lib/DisplacementMap.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ElevationProvider */ "../harp-mapview/lib/ElevationProvider.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ElevationRangeSource */ "../harp-mapview/lib/ElevationRangeSource.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ITileLoader */ "../harp-mapview/lib/ITileLoader.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/image/Image */ "../harp-mapview/lib/image/Image.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/image/ImageCache */ "../harp-mapview/lib/image/ImageCache.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/image/MapViewImageCache */ "../harp-mapview/lib/image/MapViewImageCache.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/MapAnchors */ "../harp-mapview/lib/MapAnchors.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/MapView */ "../harp-mapview/lib/MapView.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/MapViewAtmosphere */ "../harp-mapview/lib/MapViewAtmosphere.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/MapViewFog */ "../harp-mapview/lib/MapViewFog.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/MapViewPoints */ "../harp-mapview/lib/MapViewPoints.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/PickHandler */ "../harp-mapview/lib/PickHandler.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/poi/PoiManager */ "../harp-mapview/lib/poi/PoiManager.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/poi/PoiTableManager */ "../harp-mapview/lib/poi/PoiTableManager.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/Statistics */ "../harp-mapview/lib/Statistics.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/text/TextElement */ "../harp-mapview/lib/text/TextElement.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/text/TextElementsRenderer */ "../harp-mapview/lib/text/TextElementsRenderer.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/text/TextStyleCache */ "../harp-mapview/lib/text/TextStyleCache.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/TextureLoader */ "../harp-mapview/lib/TextureLoader.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/ThemeLoader */ "../harp-mapview/lib/ThemeLoader.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/Tile */ "../harp-mapview/lib/Tile.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/geometry/TileDataAccessor */ "../harp-mapview/lib/geometry/TileDataAccessor.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/geometry/TileGeometry */ "../harp-mapview/lib/geometry/TileGeometry.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/Utils */ "../harp-mapview/lib/Utils.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/VisibleTileSet */ "../harp-mapview/lib/VisibleTileSet.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/WorkerBasedDecoder */ "../harp-mapview/lib/WorkerBasedDecoder.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/WorkerBasedTiler */ "../harp-mapview/lib/WorkerBasedTiler.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/workers/WorkerLoader */ "../harp-mapview/lib/workers/WorkerLoader.ts"), exports);
-
-
-/***/ }),
-
 /***/ "../harp-mapview/lib/AnimatedExtrusionHandler.ts":
 /*!*******************************************************!*\
   !*** ../harp-mapview/lib/AnimatedExtrusionHandler.ts ***!
@@ -36868,9 +37030,9 @@ __exportStar(__webpack_require__(/*! ./lib/workers/WorkerLoader */ "../harp-mapv
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AnimatedExtrusionHandler = exports.AnimatedExtrusionState = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 /**
  * Animation states for extrusion effect
  */
@@ -37142,7 +37304,7 @@ exports.AnimatedExtrusionHandler = AnimatedExtrusionHandler;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BackgroundDataSource = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const DataSource_1 = __webpack_require__(/*! ./DataSource */ "../harp-mapview/lib/DataSource.ts");
 const AddGroundPlane_1 = __webpack_require__(/*! ./geometry/AddGroundPlane */ "../harp-mapview/lib/geometry/AddGroundPlane.ts");
 const Tile_1 = __webpack_require__(/*! ./Tile */ "../harp-mapview/lib/Tile.ts");
@@ -37226,7 +37388,7 @@ BackgroundDataSource.DEFAULT_TILING_SCHEME = harp_geoutils_1.webMercatorTilingSc
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BaseTileLoader = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const ITileLoader_1 = __webpack_require__(/*! ./ITileLoader */ "../harp-mapview/lib/ITileLoader.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("BaseTileLoader");
 /**
@@ -37381,7 +37543,7 @@ exports.BoundsGenerator = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const PlaneViewBounds_1 = __webpack_require__(/*! ./PlaneViewBounds */ "../harp-mapview/lib/PlaneViewBounds.ts");
 const SphereViewBounds_1 = __webpack_require__(/*! ./SphereViewBounds */ "../harp-mapview/lib/SphereViewBounds.ts");
 /**
@@ -37593,7 +37755,7 @@ exports.CameraMovementDetector = CameraMovementDetector;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CameraUtils = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const FovCalculation_1 = __webpack_require__(/*! ./FovCalculation */ "../harp-mapview/lib/FovCalculation.ts");
 // In centered projections the principal point is at NDC origin, splitting vertical and horizontal
@@ -37970,8 +38132,8 @@ var CameraUtils;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createDefaultClipPlanesEvaluator = exports.TiltViewClipPlanesEvaluator = exports.TopViewClipPlanesEvaluator = exports.ElevationBasedClipPlanesEvaluator = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const CameraUtils_1 = __webpack_require__(/*! ./CameraUtils */ "../harp-mapview/lib/CameraUtils.ts");
 const Utils_1 = __webpack_require__(/*! ./Utils */ "../harp-mapview/lib/Utils.ts");
@@ -38919,8 +39081,8 @@ exports.ConcurrentWorkerSet = exports.DEFAULT_WORKER_INITIALIZATION_TIMEOUT = ex
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const WorkerLoader_1 = __webpack_require__(/*! ./workers/WorkerLoader */ "../harp-mapview/lib/workers/WorkerLoader.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("ConcurrentWorkerSet");
@@ -39486,7 +39648,7 @@ exports.ConcurrentWorkerSet = ConcurrentWorkerSet;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DataSource = void 0;
 const ExprPool_1 = __webpack_require__(/*! @here/harp-datasource-protocol/lib/ExprPool */ "../harp-datasource-protocol/lib/ExprPool.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const logger = harp_utils_1.LoggerManager.instance.create("DataSource");
 /**
@@ -40147,10 +40309,10 @@ exports.debugContext = new DebugContext();
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.evaluateColorProperty = exports.applyBaseColorToMaterial = exports.applySecondaryColorToMaterial = exports.evaluateBaseColorProperty = exports.buildMetricValueEvaluator = exports.getMaterialConstructor = exports.BASE_TECHNIQUE_NON_MATERIAL_PROPS = exports.buildObject = exports.usesObject3D = exports.getBufferAttribute = exports.createMaterial = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const TechniqueDescriptors_1 = __webpack_require__(/*! @here/harp-datasource-protocol/lib/TechniqueDescriptors */ "../harp-datasource-protocol/lib/TechniqueDescriptors.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DisplacedMesh_1 = __webpack_require__(/*! ./geometry/DisplacedMesh */ "../harp-mapview/lib/geometry/DisplacedMesh.ts");
 const SolidLineMesh_1 = __webpack_require__(/*! ./geometry/SolidLineMesh */ "../harp-mapview/lib/geometry/SolidLineMesh.ts");
@@ -40844,7 +41006,7 @@ function getTextureBuffer(buffer, textureDataType) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.setDepthPrePassStencil = exports.createDepthPrePassMesh = exports.isDepthPrePassMesh = exports.createDepthPrePassMaterial = exports.isRenderDepthPrePassEnabled = exports.DEPTH_PRE_PASS_STENCIL_MASK = void 0;
 const ColorUtils_1 = __webpack_require__(/*! @here/harp-datasource-protocol/lib/ColorUtils */ "../harp-datasource-protocol/lib/ColorUtils.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DecodedTileHelpers_1 = __webpack_require__(/*! ./DecodedTileHelpers */ "../harp-mapview/lib/DecodedTileHelpers.ts");
 /**
@@ -41359,8 +41521,8 @@ exports.FrustumIntersection = exports.TileKeyEntry = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const ElevationRangeSource_1 = __webpack_require__(/*! ./ElevationRangeSource */ "../harp-mapview/lib/ElevationRangeSource.ts");
 const MapTileCuller_1 = __webpack_require__(/*! ./MapTileCuller */ "../harp-mapview/lib/MapTileCuller.ts");
@@ -41724,7 +41886,7 @@ var TileLoaderState;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapAnchors = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 /**
  * Container holding [[MapAnchor]] objects.
@@ -41829,8 +41991,8 @@ exports.MapAnchors = MapAnchors;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapMaterialAdapter = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DecodedTileHelpers_1 = __webpack_require__(/*! ./DecodedTileHelpers */ "../harp-mapview/lib/DecodedTileHelpers.ts");
 function isTextureProperty(propertyName) {
@@ -42093,7 +42255,7 @@ exports.MapObjectAdapter = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const MapMaterialAdapter_1 = __webpack_require__(/*! ./MapMaterialAdapter */ "../harp-mapview/lib/MapMaterialAdapter.ts");
 /**
  * @hidden
@@ -42338,9 +42500,9 @@ exports.MapView = exports.MapViewPowerPreference = exports.MapViewEventNames = e
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const AnimatedExtrusionHandler_1 = __webpack_require__(/*! ./AnimatedExtrusionHandler */ "../harp-mapview/lib/AnimatedExtrusionHandler.ts");
 const BackgroundDataSource_1 = __webpack_require__(/*! ./BackgroundDataSource */ "../harp-mapview/lib/BackgroundDataSource.ts");
@@ -44972,9 +45134,9 @@ exports.MapView = MapView;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapViewAtmosphere = exports.AtmosphereLightMode = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const ClipPlanesEvaluator_1 = __webpack_require__(/*! ./ClipPlanesEvaluator */ "../harp-mapview/lib/ClipPlanesEvaluator.ts");
 /**
@@ -45390,8 +45552,8 @@ function createMapAnchor(mesh, renderOrder) {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapViewEnvironment = exports.DEFAULT_CLEAR_COLOR = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const BackgroundDataSource_1 = __webpack_require__(/*! ./BackgroundDataSource */ "../harp-mapview/lib/BackgroundDataSource.ts");
 const MapViewFog_1 = __webpack_require__(/*! ./MapViewFog */ "../harp-mapview/lib/MapViewFog.ts");
@@ -45638,9 +45800,9 @@ exports.MapViewEnvironment = MapViewEnvironment;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapViewFog = void 0;
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const RawShaderMaterial_1 = __webpack_require__(/*! @here/harp-materials/lib/RawShaderMaterial */ "../harp-materials/lib/RawShaderMaterial.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 /**
  * Manages the fog display in {@link MapView}.
@@ -45958,7 +46120,7 @@ exports.MapViewTaskScheduler = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const MapView_1 = __webpack_require__(/*! ./MapView */ "../harp-mapview/lib/MapView.ts");
 const Statistics_1 = __webpack_require__(/*! ./Statistics */ "../harp-mapview/lib/Statistics.ts");
@@ -46101,7 +46263,7 @@ exports.MapViewTaskScheduler = MapViewTaskScheduler;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapViewThemeManager = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const MapViewImageCache_1 = __webpack_require__(/*! ./image/MapViewImageCache */ "../harp-mapview/lib/image/MapViewImageCache.ts");
 const ThemeLoader_1 = __webpack_require__(/*! ./ThemeLoader */ "../harp-mapview/lib/ThemeLoader.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("MapViewThemeManager");
@@ -46323,8 +46485,8 @@ exports.PathBlockingElement = PathBlockingElement;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PickHandler = exports.PickObjectType = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const MapViewPoints_1 = __webpack_require__(/*! ./MapViewPoints */ "../harp-mapview/lib/MapViewPoints.ts");
 const PickingRaycaster_1 = __webpack_require__(/*! ./PickingRaycaster */ "../harp-mapview/lib/PickingRaycaster.ts");
@@ -46596,7 +46758,7 @@ exports.PickHandler = PickHandler;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PickListener = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 // Default sorting by:
 // 1. reversed data source order (higher first)
 // 2. distance to the camera (closer first)
@@ -46834,8 +46996,8 @@ exports.PlaneViewBounds = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const Utils_1 = __webpack_require__(/*! ./Utils */ "../harp-mapview/lib/Utils.ts");
 /**
@@ -47039,9 +47201,9 @@ exports.PolarTileDataSource = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const index_decoder_1 = __webpack_require__(/*! @here/harp-datasource-protocol/index-decoder */ "../harp-datasource-protocol/index-decoder.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DataSource_1 = __webpack_require__(/*! ./DataSource */ "../harp-mapview/lib/DataSource.ts");
 const DecodedTileHelpers_1 = __webpack_require__(/*! ./DecodedTileHelpers */ "../harp-mapview/lib/DecodedTileHelpers.ts");
@@ -47315,7 +47477,7 @@ exports.PolarTileDataSource = PolarTileDataSource;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ScreenCollisionsDebug = exports.ScreenCollisions = exports.isLineWithBound = exports.DetailedCollisionBox = exports.CollisionBox = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DebugContext_1 = __webpack_require__(/*! ./DebugContext */ "../harp-mapview/lib/DebugContext.ts");
 const RBush = __webpack_require__(/*! rbush */ "../harp-mapview/node_modules/rbush/rbush.min.js");
@@ -47934,7 +48096,7 @@ exports.SkyBackground = SkyBackground;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SkyCubemapTexture = exports.SkyCubemapFaceId = exports.SKY_CUBEMAP_FACE_COUNT = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const logger = harp_utils_1.LoggerManager.instance.create("SkyCubemapTexture");
 /**
@@ -48031,8 +48193,8 @@ exports.SkyCubemapTexture = SkyCubemapTexture;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SkyGradientTexture = exports.DEFAULT_MONOMIAL_POWER = exports.DEFAULT_TEXTURE_SIZE = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 exports.DEFAULT_TEXTURE_SIZE = 512;
 exports.DEFAULT_MONOMIAL_POWER = 1;
@@ -48257,8 +48419,8 @@ exports.SkyGradientTexture = SkyGradientTexture;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SphereHorizon = exports.previousCanvasSide = exports.nextCanvasSide = exports.CanvasSide = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const CameraUtils_1 = __webpack_require__(/*! ./CameraUtils */ "../harp-mapview/lib/CameraUtils.ts");
 const Utils_1 = __webpack_require__(/*! ./Utils */ "../harp-mapview/lib/Utils.ts");
@@ -48634,8 +48796,8 @@ exports.SphereViewBounds = exports.computeEdgeDivisions = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const three_1 = __webpack_require__(/*! three */ "three");
 const SphereHorizon_1 = __webpack_require__(/*! ./SphereHorizon */ "../harp-mapview/lib/SphereHorizon.ts");
 const Utils_1 = __webpack_require__(/*! ./Utils */ "../harp-mapview/lib/Utils.ts");
@@ -48899,7 +49061,7 @@ exports.PerformanceStatistics = exports.FrameStatsArray = exports.FrameStats = e
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("Statistics");
 /**
  * A simple ring buffer to store the last `n` values of the timer. The buffer works on
@@ -50094,10 +50256,10 @@ exports.ThemeLoader = exports.DEFAULT_MAX_THEME_INTHERITANCE_DEPTH = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.ts");
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const Theme_1 = __webpack_require__(/*! @here/harp-datasource-protocol/lib/Theme */ "../harp-datasource-protocol/lib/Theme.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const SkyCubemapTexture_1 = __webpack_require__(/*! ./SkyCubemapTexture */ "../harp-mapview/lib/SkyCubemapTexture.ts");
 /**
  * @internal
@@ -50564,8 +50726,8 @@ exports.ThemeLoader = ThemeLoader;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Tile = exports.getFeatureDataSize = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const LodMesh_1 = __webpack_require__(/*! ./geometry/LodMesh */ "../harp-mapview/lib/geometry/LodMesh.ts");
 const Object3DUtils_1 = __webpack_require__(/*! ./geometry/Object3DUtils */ "../harp-mapview/lib/geometry/Object3DUtils.ts");
@@ -51508,7 +51670,7 @@ exports.TileObjectRenderer = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const BackgroundDataSource_1 = __webpack_require__(/*! ./BackgroundDataSource */ "../harp-mapview/lib/BackgroundDataSource.ts");
 const SolidLineMesh_1 = __webpack_require__(/*! ./geometry/SolidLineMesh */ "../harp-mapview/lib/geometry/SolidLineMesh.ts");
 const MapObjectAdapter_1 = __webpack_require__(/*! ./MapObjectAdapter */ "../harp-mapview/lib/MapObjectAdapter.ts");
@@ -51776,9 +51938,9 @@ exports.TileOffsetUtils = exports.MapViewUtils = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const EarthConstants_1 = __webpack_require__(/*! @here/harp-geoutils/lib/projection/EarthConstants */ "../harp-geoutils/lib/projection/EarthConstants.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const CameraUtils_1 = __webpack_require__(/*! ./CameraUtils */ "../harp-mapview/lib/CameraUtils.ts");
 const Object3DUtils_1 = __webpack_require__(/*! ./geometry/Object3DUtils */ "../harp-mapview/lib/geometry/Object3DUtils.ts");
@@ -53144,9 +53306,9 @@ var TileOffsetUtils;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.VisibleTileSet = exports.ResourceComputationType = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_lrucache_1 = __webpack_require__(/*! @here/harp-lrucache */ "../harp-lrucache/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_lrucache_1 = __webpack_require__(/*! @here/harp-lrucache */ "../harp-lrucache/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const BackgroundDataSource_1 = __webpack_require__(/*! ./BackgroundDataSource */ "../harp-mapview/lib/BackgroundDataSource.ts");
 const FrustumIntersection_1 = __webpack_require__(/*! ./FrustumIntersection */ "../harp-mapview/lib/FrustumIntersection.ts");
@@ -54191,7 +54353,7 @@ exports.WorkerBasedDecoder = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 /**
  * Identifier of next decoder worker-service. Used to ensure uniqueness of service ids of decoders
  * dedicated to different datasources.
@@ -54329,7 +54491,7 @@ exports.WorkerBasedDecoder = WorkerBasedDecoder;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WorkerBasedTiler = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 /**
  * Identifier of next tiler worker-service. Used to ensure uniqueness of service ids of tilers
  * dedicated to different datasources.
@@ -54455,7 +54617,7 @@ exports.LowResRenderPass = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const Pass_1 = __webpack_require__(/*! ./Pass */ "../harp-mapview/lib/composing/Pass.ts");
 /**
@@ -54600,7 +54762,7 @@ exports.MSAARenderPass = exports.MSAASampling = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const Pass_1 = __webpack_require__(/*! ./Pass */ "../harp-mapview/lib/composing/Pass.ts");
 /**
@@ -54883,7 +55045,7 @@ MSAARenderPass.OffsetVectors = [
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapRenderingManager = void 0;
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const LowResRenderPass_1 = __webpack_require__(/*! ./LowResRenderPass */ "../harp-mapview/lib/composing/LowResRenderPass.ts");
 const MSAARenderPass_1 = __webpack_require__(/*! ./MSAARenderPass */ "../harp-mapview/lib/composing/MSAARenderPass.ts");
@@ -55155,8 +55317,8 @@ exports.OutlineEffect = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const vertexShaderChunk = `
 #ifdef USE_EXTRUSION
@@ -55722,7 +55884,7 @@ class FullScreenQuad {
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BloomPass = void 0;
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const Pass_1 = __webpack_require__(/*! ./Pass */ "../harp-mapview/lib/composing/Pass.ts");
 const BlurDirectionX = new THREE.Vector2(1.0, 0.0);
@@ -56036,7 +56198,7 @@ Object.defineProperty(exports, "MSAASampling", ({ enumerable: true, get: functio
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CopyrightCoverageProvider = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const RBush = __webpack_require__(/*! rbush */ "../harp-mapview/node_modules/rbush/rbush.min.js");
 /**
  * Base class to provide copyrights based on copyright coverage information, defined by geographical
@@ -56146,7 +56308,7 @@ exports.CopyrightCoverageProvider = CopyrightCoverageProvider;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CopyrightElementHandler = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const MapView_1 = __webpack_require__(/*! ../MapView */ "../harp-mapview/lib/MapView.ts");
 const CopyrightInfo_1 = __webpack_require__(/*! ./CopyrightInfo */ "../harp-mapview/lib/copyrights/CopyrightInfo.ts");
 /**
@@ -56308,7 +56470,7 @@ exports.CopyrightElementHandler = CopyrightElementHandler;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CopyrightInfo = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 var CopyrightInfo;
 (function (CopyrightInfo) {
     /**
@@ -56409,7 +56571,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UrlCopyrightProvider = void 0;
-const harp_transfer_manager_1 = __webpack_require__(/*! @here/harp-transfer-manager */ "../harp-transfer-manager/index.ts");
+const harp_transfer_manager_1 = __webpack_require__(/*! @here/harp-transfer-manager */ "../harp-transfer-manager/index.js");
 const CopyrightCoverageProvider_1 = __webpack_require__(/*! ./CopyrightCoverageProvider */ "../harp-mapview/lib/copyrights/CopyrightCoverageProvider.ts");
 /**
  * Copyright provider which retrieves copyright coverage information from provided URL.
@@ -56477,11 +56639,11 @@ exports.UrlCopyrightProvider = UrlCopyrightProvider;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.addGroundPlane = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const EdgeLengthGeometrySubdivisionModifier_1 = __webpack_require__(/*! @here/harp-geometry/lib/EdgeLengthGeometrySubdivisionModifier */ "../harp-geometry/lib/EdgeLengthGeometrySubdivisionModifier.ts");
 const SphericalGeometrySubdivisionModifier_1 = __webpack_require__(/*! @here/harp-geometry/lib/SphericalGeometrySubdivisionModifier */ "../harp-geometry/lib/SphericalGeometrySubdivisionModifier.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const LodMesh_1 = __webpack_require__(/*! ./LodMesh */ "../harp-mapview/lib/geometry/LodMesh.ts");
 const ProjectTilePlaneCorners_1 = __webpack_require__(/*! ./ProjectTilePlaneCorners */ "../harp-mapview/lib/geometry/ProjectTilePlaneCorners.ts");
@@ -56622,7 +56784,7 @@ function createGroundPlaneMaterial(color, receiveShadow, depthWrite, opacity) {
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DisplacedBufferAttribute = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const VertexCache_1 = __webpack_require__(/*! ./VertexCache */ "../harp-mapview/lib/geometry/VertexCache.ts");
 /**
@@ -56869,8 +57031,8 @@ exports.DisplacedBufferGeometry = DisplacedBufferGeometry;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DisplacedMesh = void 0;
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DisplacedBufferAttribute_1 = __webpack_require__(/*! ./DisplacedBufferAttribute */ "../harp-mapview/lib/geometry/DisplacedBufferAttribute.ts");
 const DisplacedBufferGeometry_1 = __webpack_require__(/*! ./DisplacedBufferGeometry */ "../harp-mapview/lib/geometry/DisplacedBufferGeometry.ts");
@@ -57052,8 +57214,8 @@ exports.Object3DUtils = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const Tile_1 = __webpack_require__(/*! ../Tile */ "../harp-mapview/lib/Tile.ts");
 // Estimation of the size of an Object3D with all the simple properties, like matrices and flags.
@@ -57282,7 +57444,7 @@ var Object3DUtils;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.projectTilePlaneCorners = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 /**
  * Returns the corners of the tile's geo bounding box projected using a given projection.
@@ -57370,9 +57532,9 @@ exports.registerTileObject = registerTileObject;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SolidLineMesh = void 0;
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DisplacedBufferGeometry_1 = __webpack_require__(/*! ./DisplacedBufferGeometry */ "../harp-mapview/lib/geometry/DisplacedBufferGeometry.ts");
 const tmpSphere = new THREE.Sphere();
@@ -57746,8 +57908,8 @@ exports.SolidLineMesh = SolidLineMesh;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TileDataAccessor = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const TileGeometry_1 = __webpack_require__(/*! ./TileGeometry */ "../harp-mapview/lib/geometry/TileGeometry.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("TileDataAccessor");
 /**
@@ -58020,9 +58182,9 @@ exports.TileDataAccessor = TileDataAccessor;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.IndexedBufferedGeometryLineAccessor = exports.IndexedBufferedGeometryAccessor = exports.BufferedGeometryObject3dAccessor = exports.BufferedGeometryLineAccessor = exports.BufferedGeometryAccessor = exports.BufferedGeometryAccessorBase = exports.isObject3dAccessor = exports.isLineAccessor = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_lines_1 = __webpack_require__(/*! @here/harp-lines */ "../harp-lines/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_lines_1 = __webpack_require__(/*! @here/harp-lines */ "../harp-lines/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("TileGeometry");
 /**
  * Helper function to check if an accessor is of type `ILineAccessor`.
@@ -58371,10 +58533,10 @@ exports.TileGeometryCreator = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DecodedTileHelpers_1 = __webpack_require__(/*! ../DecodedTileHelpers */ "../harp-mapview/lib/DecodedTileHelpers.ts");
 const DepthPrePass_1 = __webpack_require__(/*! ../DepthPrePass */ "../harp-mapview/lib/DepthPrePass.ts");
@@ -59227,8 +59389,8 @@ exports.TileGeometryLoader = exports.TileGeometryLoaderState = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const MapView_1 = __webpack_require__(/*! ../MapView */ "../harp-mapview/lib/MapView.ts");
 const Statistics_1 = __webpack_require__(/*! ../Statistics */ "../harp-mapview/lib/Statistics.ts");
 const TileGeometryCreator_1 = __webpack_require__(/*! ./TileGeometryCreator */ "../harp-mapview/lib/geometry/TileGeometryCreator.ts");
@@ -59639,7 +59801,7 @@ exports.TileGeometryLoader = TileGeometryLoader;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TileGeometryManager = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const MapObjectAdapter_1 = __webpack_require__(/*! ../MapObjectAdapter */ "../harp-mapview/lib/MapObjectAdapter.ts");
 /**
  * Manages the content (the geometries) of a tile.
@@ -59913,7 +60075,7 @@ exports.TileGeometryManager = TileGeometryManager;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.VertexCache = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 // Offsets for the fields stored in cache for each vertex.
 var Field;
 (function (Field) {
@@ -60068,9 +60230,9 @@ exports.VertexCache = VertexCache;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.overlayOnElevation = exports.overlayTextElement = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 /**
  * Overlays the specified object's geometry on the elevation represented by the given displacement
  * map .
@@ -60200,7 +60362,7 @@ exports.overlayOnElevation = overlayOnElevation;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ImageItem = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const MipMapGenerator_1 = __webpack_require__(/*! ./MipMapGenerator */ "../harp-mapview/lib/image/MipMapGenerator.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("loadImage");
@@ -60488,7 +60650,7 @@ exports.ImageCache = ImageCache;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapViewImageCache = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const ImageCache_1 = __webpack_require__(/*! ./ImageCache */ "../harp-mapview/lib/image/ImageCache.ts");
 /**
  * Cache images wrapped into {@link ImageItem}s for a {@link MapView}.
@@ -60746,7 +60908,7 @@ exports.MipMapGenerator = MipMapGenerator;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BoxBuffer = exports.BoxBufferMesh = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const PixelPicker_1 = __webpack_require__(/*! ./PixelPicker */ "../harp-mapview/lib/poi/PixelPicker.ts");
 /**
@@ -61228,7 +61390,7 @@ exports.BoxBuffer = BoxBuffer;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getPixelFromImageData = exports.getPixelFromCanvasImageSource = exports.screenToUvCoordinates = exports.getPixelFromImage = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 /**
  * It returns an array containing the channel colors for the pixel at the given coordinates.
  *
@@ -61336,8 +61498,8 @@ exports.getPixelFromImageData = getPixelFromImageData;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PoiBuilder = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const ColorCache_1 = __webpack_require__(/*! ../ColorCache */ "../harp-mapview/lib/ColorCache.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("PoiBuilder");
 function getImageTexture(technique, env) {
@@ -61466,8 +61628,8 @@ exports.PoiBuilder = PoiBuilder;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PoiManager = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const TextElementBuilder_1 = __webpack_require__(/*! ../text/TextElementBuilder */ "../harp-mapview/lib/text/TextElementBuilder.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("PoiManager");
@@ -61783,9 +61945,9 @@ exports.PoiRenderer = exports.PoiBatchRegistry = exports.PoiBuffer = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const MipMapGenerator_1 = __webpack_require__(/*! ../image/MipMapGenerator */ "../harp-mapview/lib/image/MipMapGenerator.ts");
 const BoxBuffer_1 = __webpack_require__(/*! ./BoxBuffer */ "../harp-mapview/lib/poi/BoxBuffer.ts");
@@ -62415,8 +62577,8 @@ exports.PoiTableManager = exports.PoiTable = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("PoiTable");
 /**
  * Class to store and maintain individual POI information for the {@link PoiTable}.
@@ -62786,8 +62948,8 @@ exports.PoiTableManager = PoiTableManager;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.loadFontCatalog = void 0;
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("FontCatalogLoader");
 async function loadFontCatalog(fontCatalogConfig, onSuccess, onError) {
     return await harp_text_canvas_1.FontCatalog.load(fontCatalogConfig.url, 1024)
@@ -62819,7 +62981,7 @@ exports.loadFontCatalog = loadFontCatalog;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LayoutState = void 0;
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
 /**
  * Layout state of the text part of the `TextElement`.
  *
@@ -62960,10 +63122,10 @@ exports.MapViewState = MapViewState;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getWorldPosition = exports.isPathLabelTooSmall = exports.placePathLabel = exports.placePointLabel = exports.placeIcon = exports.PlacementResult = exports.newPointLabelTextMarginPercent = exports.persistentPointLabelTextMargin = exports.checkReadyForPlacement = exports.PrePlacementResult = exports.getMaxViewDistance = exports.pointToPlaneDistance = exports.computeViewDistance = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const PoiRenderer_1 = __webpack_require__(/*! ../poi/PoiRenderer */ "../harp-mapview/lib/poi/PoiRenderer.ts");
 const ScreenCollisions_1 = __webpack_require__(/*! ../ScreenCollisions */ "../harp-mapview/lib/ScreenCollisions.ts");
@@ -63710,7 +63872,7 @@ exports.PlacementStats = PlacementStats;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.RenderState = exports.DEFAULT_FADE_TIME = exports.FadingState = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 /**
  * State of fading.
@@ -64019,8 +64181,8 @@ exports.SimplePath = SimplePath;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextCanvasFactory = void 0;
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 class TextCanvasFactory {
     /**
      * Creates an instance of text canvas factory.
@@ -64071,7 +64233,7 @@ exports.TextCanvasFactory = TextCanvasFactory;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextElement = exports.LoadingState = exports.poiIsRenderable = void 0;
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const TextElementType_1 = __webpack_require__(/*! ./TextElementType */ "../harp-mapview/lib/text/TextElementType.ts");
 /**
@@ -64302,9 +64464,9 @@ TextElement.HIGHEST_PRIORITY = Number.MAX_SAFE_INTEGER;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextElementBuilder = void 0;
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const PoiBuilder_1 = __webpack_require__(/*! ../poi/PoiBuilder */ "../harp-mapview/lib/poi/PoiBuilder.ts");
 const TextElement_1 = __webpack_require__(/*! ./TextElement */ "../harp-mapview/lib/text/TextElement.ts");
 const TextElementsRenderer_1 = __webpack_require__(/*! ./TextElementsRenderer */ "../harp-mapview/lib/text/TextElementsRenderer.ts");
@@ -64497,7 +64659,7 @@ TextElementBuilder.RENDER_ORDER_UP_BOUND = 1e7;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextElementGroup = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 /**
  * Group of {@link TextElement} sharing same priority.
  */
@@ -64523,7 +64685,7 @@ exports.TextElementGroup = TextElementGroup;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextElementGroupPriorityList = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 /**
  * List of {@link TextElement} groups sorted by priority.
  */
@@ -64544,7 +64706,7 @@ exports.TextElementGroupPriorityList = TextElementGroupPriorityList;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextElementGroupState = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const TextElementState_1 = __webpack_require__(/*! ./TextElementState */ "../harp-mapview/lib/text/TextElementState.ts");
 const TextElementType_1 = __webpack_require__(/*! ./TextElementType */ "../harp-mapview/lib/text/TextElementType.ts");
 /**
@@ -64671,8 +64833,8 @@ exports.TextElementGroupState = TextElementGroupState;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isLineMarkerElementState = exports.TextElementState = void 0;
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const LayoutState_1 = __webpack_require__(/*! ./LayoutState */ "../harp-mapview/lib/text/LayoutState.ts");
 const RenderState_1 = __webpack_require__(/*! ./RenderState */ "../harp-mapview/lib/text/RenderState.ts");
 const TextElementType_1 = __webpack_require__(/*! ./TextElementType */ "../harp-mapview/lib/text/TextElementType.ts");
@@ -64937,7 +65099,7 @@ exports.isLineMarkerElementState = isLineMarkerElementState;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextElementStateCache = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const TextElementGroupState_1 = __webpack_require__(/*! ./TextElementGroupState */ "../harp-mapview/lib/text/TextElementGroupState.ts");
 const TextElementState_1 = __webpack_require__(/*! ./TextElementState */ "../harp-mapview/lib/text/TextElementState.ts");
 const TextElementType_1 = __webpack_require__(/*! ./TextElementType */ "../harp-mapview/lib/text/TextElementType.ts");
@@ -65289,8 +65451,8 @@ var TextElementType;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextElementsRenderer = exports.DEFAULT_TEXT_DISTANCE_SCALE = exports.DEFAULT_FONT_CATALOG_NAME = void 0;
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const DebugContext_1 = __webpack_require__(/*! ../DebugContext */ "../harp-mapview/lib/DebugContext.ts");
 const overlayOnElevation_1 = __webpack_require__(/*! ../geometry/overlayOnElevation */ "../harp-mapview/lib/geometry/overlayOnElevation.ts");
@@ -66904,9 +67066,9 @@ exports.TextStyleCache = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const ColorCache_1 = __webpack_require__(/*! ../ColorCache */ "../harp-mapview/lib/ColorCache.ts");
 const DecodedTileHelpers_1 = __webpack_require__(/*! ../DecodedTileHelpers */ "../harp-mapview/lib/DecodedTileHelpers.ts");
 const TextElementsRenderer_1 = __webpack_require__(/*! ./TextElementsRenderer */ "../harp-mapview/lib/text/TextElementsRenderer.ts");
@@ -67427,8 +67589,8 @@ exports.isWorkerBootstrapResponse = isWorkerBootstrapResponse;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WorkerLoader = void 0;
-__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const WorkerBootstrapDefs_1 = __webpack_require__(/*! ./WorkerBootstrapDefs */ "../harp-mapview/lib/workers/WorkerBootstrapDefs.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("WorkerLoader");
 /**
@@ -67652,59 +67814,6 @@ exports.WorkerLoader = WorkerLoader;
 WorkerLoader.directlyFallbackToBlobBasedLoading = false;
 WorkerLoader.sourceLoaderCache = new Map();
 WorkerLoader.dependencyUrlMapping = {};
-
-
-/***/ }),
-
-/***/ "../harp-materials/index.ts":
-/*!**********************************!*\
-  !*** ../harp-materials/index.ts ***!
-  \**********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * Materials defining the appearance of map objects.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./lib/CirclePointsMaterial */ "../harp-materials/lib/CirclePointsMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/CopyMaterial */ "../harp-materials/lib/CopyMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/DisplacementFeature */ "../harp-materials/lib/DisplacementFeature.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/EdgeMaterial */ "../harp-materials/lib/EdgeMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/GroundAtmosphereMaterial */ "../harp-materials/lib/GroundAtmosphereMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/HighPrecisionLineMaterial */ "../harp-materials/lib/HighPrecisionLineMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/HighPrecisionPointMaterial */ "../harp-materials/lib/HighPrecisionPointMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/IconMaterial */ "../harp-materials/lib/IconMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/LuminosityHighPassShader */ "../harp-materials/lib/LuminosityHighPassShader.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/MapMeshMaterialsDefs */ "../harp-materials/lib/MapMeshMaterialsDefs.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/MapMeshMaterials */ "../harp-materials/lib/MapMeshMaterials.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/MSAAMaterial */ "../harp-materials/lib/MSAAMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/RawShaderMaterial */ "../harp-materials/lib/RawShaderMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/SepiaShader */ "../harp-materials/lib/SepiaShader.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/SkyAtmosphereMaterial */ "../harp-materials/lib/SkyAtmosphereMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/SolidLineMaterial */ "../harp-materials/lib/SolidLineMaterial.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/Utils */ "../harp-materials/lib/Utils.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/VignetteShader */ "../harp-materials/lib/VignetteShader.ts"), exports);
 
 
 /***/ }),
@@ -68006,6 +68115,7 @@ uniform float edgeColorMix;
 attribute vec3 normal;
 attribute vec2 uv;
 uniform sampler2D displacementMap;
+uniform mat3 displacementMapUvMatrix;
 #endif
 
 varying vec3 vColor;
@@ -68028,8 +68138,8 @@ void main() {
     #include <extrusion_vertex>
     #endif
 
-    #ifdef USE_DISPLACEMENTMAP
-    transformed += normalize( normal ) * texture2D( displacementMap, uv ).x;
+    #ifdef USE_DISPLACEMENTMAP 
+    transformed += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * uv).xy ).x;
     #endif
 
     vec4 mvPosition = modelViewMatrix * vec4( transformed, 1.0 );
@@ -68111,7 +68221,8 @@ class EdgeMaterial extends RawShaderMaterial_1.RawShaderMaterial {
                     fadeNear: new THREE.Uniform(MapMeshMaterials_1.FadingFeature.DEFAULT_FADE_NEAR),
                     fadeFar: new THREE.Uniform(MapMeshMaterials_1.FadingFeature.DEFAULT_FADE_FAR),
                     extrusionRatio: new THREE.Uniform(MapMeshMaterialsDefs_1.ExtrusionFeatureDefs.DEFAULT_RATIO_MAX),
-                    displacementMap: new THREE.Uniform((_a = params.displacementMap) !== null && _a !== void 0 ? _a : new THREE.Texture())
+                    displacementMap: new THREE.Uniform((_a = params.displacementMap) !== null && _a !== void 0 ? _a : new THREE.Texture()),
+                    displacementMapUvMatrix: new THREE.Uniform(params.displacementMapUvMatrix),
                 },
                 depthWrite: false,
                 defines,
@@ -68141,6 +68252,7 @@ class EdgeMaterial extends RawShaderMaterial_1.RawShaderMaterial {
             }
             if (params.displacementMap !== undefined) {
                 this.displacementMap = params.displacementMap;
+                this.displacementMapUvMatrix = params.displacementMapUvMatrix;
             }
             if (params.extrusionRatio !== undefined) {
                 this.extrusionRatio = params.extrusionRatio;
@@ -68247,6 +68359,12 @@ class EdgeMaterial extends RawShaderMaterial_1.RawShaderMaterial {
             this.uniforms.displacementMap.value.needsUpdate = true;
         }
         Utils_1.setShaderMaterialDefine(this, "USE_DISPLACEMENTMAP", useDisplacementMap);
+    }
+    get displacementMapUvMatrix() {
+        return this.uniforms.displacementMapUvMatrix.value;
+    }
+    set displacementMapUvMatrix(matrix) {
+        this.uniforms.displacementMapUvMatrix.value = matrix;
     }
 }
 exports.EdgeMaterial = EdgeMaterial;
@@ -69211,7 +69329,7 @@ exports.MSAAMaterial = MSAAMaterial;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MapMeshStandardMaterial = exports.MapMeshDepthMaterial = exports.MapMeshBasicMaterial = exports.ExtrusionFeatureMixin = exports.ExtrusionFeature = exports.FadingFeatureMixin = exports.FadingFeature = exports.DisplacementFeatureMixin = exports.hasExtrusionFeature = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const MapMeshMaterialsDefs_1 = __webpack_require__(/*! ./MapMeshMaterialsDefs */ "../harp-materials/lib/MapMeshMaterialsDefs.ts");
 const ExtrusionChunks_1 = __webpack_require__(/*! ./ShaderChunks/ExtrusionChunks */ "../harp-materials/lib/ShaderChunks/ExtrusionChunks.ts");
@@ -70131,7 +70249,7 @@ exports.RawShaderMaterial = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const Utils_1 = __webpack_require__(/*! ./Utils */ "../harp-materials/lib/Utils.ts");
 /**
@@ -71776,7 +71894,7 @@ SolidLineMaterial.DEFAULT_OFFSET = 0.0;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getShaderDefine = exports.setShaderDefine = exports.getShaderMaterialDefine = exports.setShaderMaterialDefine = exports.disableBlending = exports.enableBlending = exports.enforceBlending = exports.insertShaderInclude = exports.DEFINE_BOOL_FALSE = exports.DEFINE_BOOL_TRUE = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 /**
  * Values for boolean shader defines
@@ -72017,50 +72135,6 @@ exports.VignetteShader = {
             gl_FragColor = vec4( mix( texel.rgb, vec3( 1.0 - darkness ), dot( uv, uv ) ), texel.a );
         }`
 };
-
-
-/***/ }),
-
-/***/ "../harp-text-canvas/index.ts":
-/*!************************************!*\
-  !*** ../harp-text-canvas/index.ts ***!
-  \************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * SDF based text rendering for TypeScript.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./lib/rendering/FontCatalog */ "../harp-text-canvas/lib/rendering/FontCatalog.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/rendering/GlyphData */ "../harp-text-canvas/lib/rendering/GlyphData.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/rendering/TextStyle */ "../harp-text-canvas/lib/rendering/TextStyle.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/rendering/TextBufferObject */ "../harp-text-canvas/lib/rendering/TextBufferObject.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/TextCanvas */ "../harp-text-canvas/lib/TextCanvas.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/utils/ContextualArabicConverter */ "../harp-text-canvas/lib/utils/ContextualArabicConverter.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/utils/MaterialUtils */ "../harp-text-canvas/lib/utils/MaterialUtils.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/utils/TypesettingUtils */ "../harp-text-canvas/lib/utils/TypesettingUtils.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/utils/UnicodeUtils */ "../harp-text-canvas/lib/utils/UnicodeUtils.ts"), exports);
 
 
 /***/ }),
@@ -73202,7 +73276,7 @@ exports.GlyphData = GlyphData;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GlyphTextureCache = void 0;
-const harp_lrucache_1 = __webpack_require__(/*! @here/harp-lrucache */ "../harp-lrucache/index.ts");
+const harp_lrucache_1 = __webpack_require__(/*! @here/harp-lrucache */ "../harp-lrucache/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const GlyphData_1 = __webpack_require__(/*! ./GlyphData */ "../harp-text-canvas/lib/rendering/GlyphData.ts");
 const TextMaterials_1 = __webpack_require__(/*! ./TextMaterials */ "../harp-text-canvas/lib/rendering/TextMaterials.ts");
@@ -73979,7 +74053,7 @@ exports.TextGeometry = TextGeometry;
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SdfTextMaterial = exports.GlyphCopyMaterial = exports.GlyphClearMaterial = void 0;
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const SdfShaderChunks = {
     sdf_attributes: `
@@ -76121,42 +76195,6 @@ var UnicodeUtils;
 
 /***/ }),
 
-/***/ "../harp-transfer-manager/index.ts":
-/*!*****************************************!*\
-  !*** ../harp-transfer-manager/index.ts ***!
-  \*****************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * Provides a manager that orchestrates downloading URLs, particularly static map resources.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./src/TransferManager */ "../harp-transfer-manager/src/TransferManager.ts"), exports);
-
-
-/***/ }),
-
 /***/ "../harp-transfer-manager/src/DeferredPromise.ts":
 /*!*******************************************************!*\
   !*** ../harp-transfer-manager/src/DeferredPromise.ts ***!
@@ -76225,7 +76263,7 @@ exports.TransferManager = void 0;
  * This module provides classes to ease downloading URLs. In particular, following redirects,
  * retrying on HTTP errors, and limiting the number of parallel concurrent downloads.
  */
-__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.ts");
+__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
 const DeferredPromise_1 = __webpack_require__(/*! ./DeferredPromise */ "../harp-transfer-manager/src/DeferredPromise.ts");
 /**
  * `TransferManager` for downloading URLs.
@@ -76437,43 +76475,6 @@ __exportStar(__webpack_require__(/*! ./lib/Functions */ "../harp-utils/lib/Funct
 __exportStar(__webpack_require__(/*! ./lib/SampleBilinear */ "../harp-utils/lib/SampleBilinear.ts"), exports);
 __exportStar(__webpack_require__(/*! ./lib/AuthenticationUtils */ "../harp-utils/lib/AuthenticationUtils.ts"), exports);
 __exportStar(__webpack_require__(/*! ./lib/GlslUtils */ "../harp-utils/lib/GlslUtils.ts"), exports);
-
-
-/***/ }),
-
-/***/ "../harp-utils/index.ts":
-/*!******************************!*\
-  !*** ../harp-utils/index.ts ***!
-  \******************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * Provides utilities: logging and debugging.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./index-common */ "../harp-utils/index-common.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/UrlPlatformUtils */ "../harp-utils/lib/UrlPlatformUtils.ts"), exports);
 
 
 /***/ }),
@@ -78628,11 +78629,11 @@ __exportStar(__webpack_require__(/*! ./lib/GeoJsonDataProvider */ "../harp-vecto
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GeoJsonDataProvider = void 0;
-__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.ts");
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const OmvDecoderDefs_1 = __webpack_require__(/*! ./OmvDecoderDefs */ "../harp-vectortile-datasource/lib/OmvDecoderDefs.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("GeoJsonDataProvider");
 const INVALIDATED = "invalidated";
@@ -78718,7 +78719,7 @@ exports.OmvGenericFeatureModifier = exports.ComposedDataFilter = exports.OmvGene
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const OmvDecoderDefs_1 = __webpack_require__(/*! ./OmvDecoderDefs */ "../harp-vectortile-datasource/lib/OmvDecoderDefs.ts");
 /**
  * Builds an `OmvFilterDescription` (internal type) that specifies an [[OmvFeatureFilter]] as well
@@ -79206,12 +79207,12 @@ exports.OmvDebugLabelsTile = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const DebugContext_1 = __webpack_require__(/*! @here/harp-mapview/lib/DebugContext */ "../harp-mapview/lib/DebugContext.ts");
 const TileGeometryCreator_1 = __webpack_require__(/*! @here/harp-mapview/lib/geometry/TileGeometryCreator */ "../harp-mapview/lib/geometry/TileGeometryCreator.ts");
 const TextElementType_1 = __webpack_require__(/*! @here/harp-mapview/lib/text/TextElementType */ "../harp-mapview/lib/text/TextElementType.ts");
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 const debugMaterial = new THREE.LineBasicMaterial({
     color: 0x000000,
@@ -79584,10 +79585,10 @@ exports.GEOJSON_TILER_SERVICE_TYPE = "geojson-tiler";
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OmvRestClient = exports.AuthenticationTypeAccessToken = exports.AuthenticationTypeTomTomV1 = exports.AuthenticationTypeBearer = exports.AuthenticationMethod = exports.APIFormat = void 0;
-__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.ts");
+__webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
 const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.ts");
-const harp_transfer_manager_1 = __webpack_require__(/*! @here/harp-transfer-manager */ "../harp-transfer-manager/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_transfer_manager_1 = __webpack_require__(/*! @here/harp-transfer-manager */ "../harp-transfer-manager/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("OmvRestClient");
 var APIFormat;
 (function (APIFormat) {
@@ -79945,11 +79946,11 @@ exports.VectorTileDataSource = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.ts");
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const OmvDecoderDefs_1 = __webpack_require__(/*! ./OmvDecoderDefs */ "../harp-vectortile-datasource/lib/OmvDecoderDefs.ts");
 const OmvRestClient_1 = __webpack_require__(/*! ./OmvRestClient */ "../harp-vectortile-datasource/lib/OmvRestClient.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("VectorTileDataSource");
@@ -80206,8 +80207,8 @@ exports.HereWebTileDataSource = exports.HereTileProvider = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const WebTileDataSource_1 = __webpack_require__(/*! ./WebTileDataSource */ "../harp-webtile-datasource/lib/WebTileDataSource.ts");
 const textureLoader = new harp_mapview_1.TextureLoader();
 /**
@@ -80457,9 +80458,9 @@ exports.WebTileDataSource = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.ts");
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
-const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.ts");
+const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
+const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const WebTileLoader_1 = __webpack_require__(/*! ./WebTileLoader */ "../harp-webtile-datasource/lib/WebTileLoader.ts");
 /**
  * Instances of `WebTileDataSource` can be used to add Web Tile to [[MapView]].
@@ -80592,9 +80593,9 @@ exports.WebTileLoader = void 0;
  * Licensed under Apache 2.0, see full license in LICENSE
  * SPDX-License-Identifier: Apache-2.0
  */
-const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.ts");
+const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
 const AddGroundPlane_1 = __webpack_require__(/*! @here/harp-mapview/lib/geometry/AddGroundPlane */ "../harp-mapview/lib/geometry/AddGroundPlane.ts");
-const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.ts");
+const harp_materials_1 = __webpack_require__(/*! @here/harp-materials */ "../harp-materials/index.js");
 const THREE = __webpack_require__(/*! three */ "three");
 /**
  * TileLoader used by `WebTileDataSource`.

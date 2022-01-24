@@ -16,7 +16,7 @@
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TextCanvasDynamicExample = void 0;
-const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.ts");
+const harp_text_canvas_1 = __webpack_require__(/*! @here/harp-text-canvas */ "../harp-text-canvas/index.js");
 const dat_gui_1 = __webpack_require__(/*! dat.gui */ "../../node_modules/dat.gui/build/dat.gui.module.js");
 const Stats = __webpack_require__(/*! stats.js */ "../../node_modules/stats.js/build/stats.min.js");
 const THREE = __webpack_require__(/*! three */ "three");
