@@ -489,7 +489,7 @@ export class SolidLineMaterial
                         fadeNear: new THREE.Uniform(FadingFeature.DEFAULT_FADE_NEAR),
                         fadeFar: new THREE.Uniform(FadingFeature.DEFAULT_FADE_FAR),
                         displacementMap: new THREE.Uniform(
-                            displacementMap !== undefined ? displacementMap : new THREE.Texture()
+                            displacementMap !== undefined ? displacementMap : new THREE.DataTexture(new ArrayBuffer(0),0,0)
                         ),
                         displacementMapUvMatrix: new THREE.Uniform(params.displacementMapUvMatrix),
                         drawRange: new THREE.Uniform(
