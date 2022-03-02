@@ -90,13 +90,13 @@ function convertPoint<VectorType extends Vector2Like>(
 function convertLineStringGeometry(
     coordinates: GeoPointLike[],
     decodeInfo: DecodeInfo
-): ILineGeometry {
+) :any {
     const untiledPositions = coordinates.map(geoPoint => {
         return GeoCoordinates.fromGeoPoint(geoPoint);
     });
 
     const positions = coordinates.map(geoPoint =>
-        convertPoint(geoPoint, decodeInfo, new Vector2())
+        convertPoint(geoPoint, decodeInfo, new Vector3())
     );
 
     return { untiledPositions, positions };
