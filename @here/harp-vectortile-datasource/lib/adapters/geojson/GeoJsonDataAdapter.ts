@@ -184,14 +184,14 @@ export class GeoJsonDataAdapter implements DataAdapter {
 
                     geometry.forEach(g => {
                         const clipped = clipLineString(
-                            g.positions,
+                            g.positions as any,
                             -DEFAULT_BORDER,
                             -DEFAULT_BORDER,
                             DEFAULT_EXTENTS + DEFAULT_BORDER,
                             DEFAULT_EXTENTS + DEFAULT_BORDER
                         );
                         clipped.forEach(positions => {
-                            clippedGeometries.push({ positions });
+                            clippedGeometries.push({ positions:positions  as any});
                         });
                     });
 

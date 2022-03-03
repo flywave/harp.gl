@@ -54,8 +54,8 @@ class ClipEdge {
      * {@link https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection
      *    | line-line intersection}.
      */
-    computeIntersection(a: Vector2, b: Vector2): Vector2 {
-        const result = new Vector2();
+    computeIntersection<Vector>(a: Vector3, b: Vector3): Vector3 {
+        const result = new Vector3();
         Math2D.intersectLines(
             a.x,
             a.y,
@@ -67,22 +67,26 @@ class ClipEdge {
             this.p1.y,
             result
         );
+        result.z = a.z +(result.distanceTo(a) / a.distanceTo(b)) * (b.z - a.z);
         return result;
     }
 
     /**
      * Clip the input line against this edge.
      */
-    clipLine(lineString: Vector2[]): Vector2[][] {
+    clipLine(lineString: Vector3[]): Vector3[][] {
         const inputList = lineString;
 
-        const result: Vector2[][] = [];
+        const result: Vector3[][] = [];
 
         lineString = [];
         result.push(lineString);
 
-        const pushPoint = (point: Vector2) => {
-            if (lineString.length === 0 || !lineString[lineString.length - 1].equals(point)) {
+        const pushPoint = (point: Vector3) => {
+            if (
+                lineString.length === 0 ||
+                !(lineString[lineString.length - 1] as any).equals(point)
+            ) {
                 lineString.push(point);
             }
         };
@@ -91,17 +95,19 @@ class ClipEdge {
             const currentPoint = inputList[i];
             const prevPoint = i > 0 ? inputList[i - 1] : undefined;
 
-            if (this.inside(currentPoint)) {
-                if (prevPoint !== undefined && !this.inside(prevPoint)) {
+            if (this.inside(currentPoint as any)) {
+                if (prevPoint !== undefined && !this.inside(prevPoint as any)) {
                     if (lineString.length > 0) {
                         lineString = [];
                         result.push(lineString);
                     }
-                    pushPoint(this.computeIntersection(prevPoint, currentPoint));
+                    pushPoint(
+                        this.computeIntersection(prevPoint as any, currentPoint as any) as any
+                    );
                 }
                 pushPoint(currentPoint);
-            } else if (prevPoint !== undefined && this.inside(prevPoint)) {
-                pushPoint(this.computeIntersection(prevPoint, currentPoint));
+            } else if (prevPoint !== undefined && this.inside(prevPoint as any)) {
+                pushPoint(this.computeIntersection(prevPoint as any, currentPoint as any) as any);
             }
         }
 
@@ -115,8 +121,8 @@ class ClipEdge {
     /**
      * Clip the input lines against this edge.
      */
-    clipLines(lineStrings: Vector2[][]) {
-        const reuslt: Vector2[][] = [];
+    clipLines(lineStrings: Vector3[][]) {
+        const reuslt: Vector3[][] = [];
         lineStrings.forEach(lineString => {
             this.clipLine(lineString).forEach(clippedLine => {
                 reuslt.push(clippedLine);
@@ -136,12 +142,12 @@ class ClipEdge {
  * @param maxY - The maxumum y coordinate.
  */
 export function clipLineString(
-    lineString: Vector2[],
+    lineString: Vector3[],
     minX: number,
     minY: number,
     maxX: number,
     maxY: number
-): Vector2[][] {
+):   Vector3[][] {
     const clipEdge0 = new ClipEdge(minX, minY, minX, maxY, p => p.x > minX); // left
     const clipEdge1 = new ClipEdge(minX, maxY, maxX, maxY, p => p.y < maxY); // bottom
     const clipEdge2 = new ClipEdge(maxX, maxY, maxX, minY, p => p.x < maxX); // right
@@ -174,7 +180,7 @@ interface WrappedLineString {
  * @internal
  */
 function wrapMultiLineStringHelper(
-    multiLineString: Vector2[][],
+    multiLineString: Vector3[][],
     edges: ClipEdge[],
     offset: number
 ): GeoCoordinates[][] | undefined {
@@ -222,8 +228,8 @@ export function wrapLineString(coordinates: GeoCoordinates[]): Partial<WrappedLi
     const worldP = new Vector3();
 
     const lineString = coordinates.map(g => {
-        const { x, y } = webMercatorProjection.projectPoint(g, worldP);
-        return new Vector2(x, y);
+        const { x, y,z } = webMercatorProjection.projectPoint(g, worldP);
+        return new Vector3(x, y,z);
     });
 
     const multiLineString = [lineString];
