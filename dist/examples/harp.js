@@ -25513,8 +25513,8 @@ class PickHandler {
             }
         }
         // Intersect any objects added by the user.
-        intersects.length = 0;
         for (const child of this.mapView.mapAnchors.children) {
+            intersects.length = 0;
             rayCaster.intersectObject(child, true, intersects);
             for (const intersect of intersects) {
                 pickListener.addResult(this.createResult(intersect));
@@ -39258,7 +39258,7 @@ function overlayOnElevation(tile) {
     }
     // TODO: HARP-8808 Apply displacement maps once per material.
     for (const object of tile.objects) {
-        overlayObject(object, displacementMap.texture);
+        overlayObject(object, displacementMap);
     }
 }
 exports.overlayOnElevation = overlayOnElevation;
@@ -46977,7 +46977,8 @@ exports.hasDisplacementFeature = hasDisplacementFeature;
  */
 function setDisplacementMapToMaterial(displacementMap, material) {
     if (hasDisplacementFeature(material) && material.displacementMap !== displacementMap) {
-        material.displacementMap = displacementMap;
+        material.displacementMap = displacementMap === null || displacementMap === void 0 ? void 0 : displacementMap.texture;
+        material.displacementMapUvMatrix = displacementMap === null || displacementMap === void 0 ? void 0 : displacementMap.uvMatrix;
         material.needsUpdate = true;
         if (material.displacementMap !== null) {
             material.displacementMap.needsUpdate = true;
@@ -47058,7 +47059,7 @@ void main() {
     #endif
 
     #ifdef USE_DISPLACEMENTMAP 
-    transformed += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * uv).xy ).x;
+    transformed += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * vec3(uv,1.0)).xy ).x;
     #endif
 
     vec4 mvPosition = modelViewMatrix * vec4( transformed, 1.0 );
@@ -49026,12 +49027,26 @@ class MapMeshStandardMaterial extends THREE.MeshStandardMaterial {
         ExtrusionFeature.patchGlobalShaderChunks();
         this.addExtrusionProperties();
         this.applyExtrusionParameters(Object.assign(Object.assign({}, params), { zFightingWorkaround: true }));
-        if ((params === null || params === void 0 ? void 0 : params.removeDiffuseLight) === true) {
-            this.onBeforeCompile = harp_utils_1.chainCallbacks(this.onBeforeCompile, shaderParameters => {
-                const shader = shaderParameters;
+        let _this = this;
+        this.onBeforeCompile = harp_utils_1.chainCallbacks(this.onBeforeCompile, shaderParameters => {
+            const shader = shaderParameters;
+            if ((params === null || params === void 0 ? void 0 : params.removeDiffuseLight) === true) {
                 shader.fragmentShader = THREE.ShaderChunk.meshphysical_frag.replace("#include <lights_physical_pars_fragment>", ShadowChunks_1.simpleLightingShadowChunk);
-            });
-        }
+            }
+            shader.vertexShader = shader.vertexShader.replace("#include <displacementmap_pars_vertex>", `#ifdef USE_DISPLACEMENTMAP
+
+                uniform mat3 displacementUvMat;
+                uniform sampler2D displacementMap;
+                uniform float displacementScale;
+                uniform float displacementBias;
+            
+                #endif`);
+            shader.vertexShader = shader.vertexShader.replace("#include <displacementmap_vertex>", `#ifdef USE_DISPLACEMENTMAP 
+                transformed += normalize( objectNormal ) * ( texture2D( displacementMap, (displacementUvMat*vec3(uv,1.0)).xy ).x * displacementScale + displacementBias );
+                #endif`);
+            shader.uniforms.displacementUvMat = { value: _this.displacementMapUvMatrix || new THREE.Matrix3 };
+            _this.displacementUvMat = shader.uniforms.displacementUvMat;
+        });
     }
     // overrides with THREE.js base classes are not recognized by tslint.
     clone() {
@@ -49082,6 +49097,14 @@ class MapMeshStandardMaterial extends THREE.MeshStandardMaterial {
     /** @internal */
     set removeDiffuseLight(val) {
         // Stays empty.
+    }
+    set displacementMapUvMatrix(matrix) {
+        this.uVMat = matrix;
+        if (this.displacementUvMat)
+            this.displacementUvMat.value = matrix;
+    }
+    get displacementMapUvMatrix() {
+        return this.uVMat;
     }
     addFadingProperties() {
         // to be overridden
@@ -50206,6 +50229,7 @@ uniform vec2 drawRange;
 
 #ifdef USE_DISPLACEMENTMAP
 uniform sampler2D displacementMap;
+uniform mat3 displacementMapUvMatrix;
 #endif
 
 #ifdef USE_TILE_CLIP
@@ -50261,7 +50285,7 @@ void main() {
 
     // Transform position.
     #ifdef USE_DISPLACEMENTMAP
-    pos += normalize( normal ) * texture2D( displacementMap, uv ).x;
+    pos += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * vec3(uv,1.0)).xy ).x;
     #endif
 
     // Shift the line based on the offset, where the bitangent is the cross product of the average
@@ -50486,7 +50510,8 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
                         tileSize: new THREE.Uniform(new THREE.Vector2()),
                         fadeNear: new THREE.Uniform(MapMeshMaterials_1.FadingFeature.DEFAULT_FADE_NEAR),
                         fadeFar: new THREE.Uniform(MapMeshMaterials_1.FadingFeature.DEFAULT_FADE_FAR),
-                        displacementMap: new THREE.Uniform(displacementMap !== undefined ? displacementMap : new THREE.Texture()),
+                        displacementMap: new THREE.Uniform(displacementMap !== undefined ? displacementMap : new THREE.DataTexture(new ArrayBuffer(0), 0, 0)),
+                        displacementMapUvMatrix: new THREE.Uniform(params.displacementMapUvMatrix),
                         drawRange: new THREE.Uniform(new THREE.Vector2(SolidLineMaterial.DEFAULT_DRAW_RANGE_START, SolidLineMaterial.DEFAULT_DRAW_RANGE_END)),
                         dashSize: new THREE.Uniform(SolidLineMaterial.DEFAULT_DASH_SIZE),
                         gapSize: new THREE.Uniform(SolidLineMaterial.DEFAULT_GAP_SIZE)
@@ -50549,6 +50574,7 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
             }
             if (params.displacementMap !== undefined) {
                 this.displacementMap = params.displacementMap;
+                this.displacementMapUvMatrix = params.displacementMapUvMatrix;
             }
             if (params.caps !== undefined) {
                 this.caps = params.caps;
@@ -50756,6 +50782,12 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
             this.uniforms.displacementMap.value.needsUpdate = true;
         }
         Utils_1.setShaderMaterialDefine(this, "USE_DISPLACEMENTMAP", useDisplacementMap);
+    }
+    get displacementMapUvMatrix() {
+        return this.uniforms.displacementMapUvMatrix.value;
+    }
+    set displacementMapUvMatrix(matrix) {
+        this.uniforms.displacementMapUvMatrix.value = matrix;
     }
     get drawRangeStart() {
         return this.uniforms.drawRange.value.x;

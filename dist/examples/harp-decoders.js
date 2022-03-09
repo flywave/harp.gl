@@ -14037,8 +14037,9 @@ class ClipEdge {
      *    | line-line intersection}.
      */
     computeIntersection(a, b) {
-        const result = new three_1.Vector2();
+        const result = new three_1.Vector3();
         harp_utils_1.Math2D.intersectLines(a.x, a.y, b.x, b.y, this.p0.x, this.p0.y, this.p1.x, this.p1.y, result);
+        result.z = a.z + (result.distanceTo(a) / a.distanceTo(b)) * (b.z - a.z);
         return result;
     }
     /**
@@ -14050,7 +14051,8 @@ class ClipEdge {
         lineString = [];
         result.push(lineString);
         const pushPoint = (point) => {
-            if (lineString.length === 0 || !lineString[lineString.length - 1].equals(point)) {
+            if (lineString.length === 0 ||
+                !lineString[lineString.length - 1].equals(point)) {
                 lineString.push(point);
             }
         };
@@ -14156,8 +14158,8 @@ function wrapMultiLineStringHelper(multiLineString, edges, offset) {
 function wrapLineString(coordinates) {
     const worldP = new three_1.Vector3();
     const lineString = coordinates.map(g => {
-        const { x, y } = harp_geoutils_1.webMercatorProjection.projectPoint(g, worldP);
-        return new three_1.Vector2(x, y);
+        const { x, y, z } = harp_geoutils_1.webMercatorProjection.projectPoint(g, worldP);
+        return new three_1.Vector3(x, y, z);
     });
     const multiLineString = [lineString];
     return {
@@ -25173,7 +25175,7 @@ function convertLineStringGeometry(coordinates, decodeInfo) {
     const untiledPositions = coordinates.map(geoPoint => {
         return harp_geoutils_1.GeoCoordinates.fromGeoPoint(geoPoint);
     });
-    const positions = coordinates.map(geoPoint => convertPoint(geoPoint, decodeInfo, new three_1.Vector2()));
+    const positions = coordinates.map(geoPoint => convertPoint(geoPoint, decodeInfo, new three_1.Vector3()));
     return { untiledPositions, positions };
 }
 function convertLineGeometry(geometry, decodeInfo) {
@@ -25230,7 +25232,7 @@ class GeoJsonDataAdapter {
                     geometry.forEach(g => {
                         const clipped = ClipLineString_1.clipLineString(g.positions, -DEFAULT_BORDER, -DEFAULT_BORDER, DEFAULT_EXTENTS + DEFAULT_BORDER, DEFAULT_EXTENTS + DEFAULT_BORDER);
                         clipped.forEach(positions => {
-                            clippedGeometries.push({ positions });
+                            clippedGeometries.push({ positions: positions });
                         });
                     });
                     geometry = clippedGeometries;

@@ -15,7 +15,7 @@ const harp_debug_datasource_1 = __webpack_require__(/*! @here/harp-debug-datasou
 const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const harp_map_controls_1 = __webpack_require__(/*! @here/harp-map-controls */ "../harp-map-controls/index.ts");
 const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
-const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.ts");
+const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.js");
 const custom_decoder_defs_1 = __webpack_require__(/*! ../decoder/custom_decoder_defs */ "./decoder/custom_decoder_defs.ts");
 /**
  * This example shows how to create your own datasource with following features:

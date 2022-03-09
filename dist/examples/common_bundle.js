@@ -216,6 +216,44 @@ __exportStar(__webpack_require__(/*! ./lib/LRUCache */ "../harp-lrucache/lib/LRU
 
 /***/ }),
 
+/***/ "../harp-mapview-decoder/index.js":
+/*!****************************************!*\
+  !*** ../harp-mapview-decoder/index.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * Decoder worker for {@ref MapView}.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./lib/DataProvider */ "../harp-mapview-decoder/lib/DataProvider.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/TileDataSource */ "../harp-mapview-decoder/lib/TileDataSource.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/TileLoader */ "../harp-mapview-decoder/lib/TileLoader.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
 /***/ "../harp-mapview/index.js":
 /*!********************************!*\
   !*** ../harp-mapview/index.js ***!
@@ -479,6 +517,47 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
  */
 __exportStar(__webpack_require__(/*! ./index-common */ "../harp-utils/index-common.ts"), exports);
 __exportStar(__webpack_require__(/*! ./lib/UrlPlatformUtils */ "../harp-utils/lib/UrlPlatformUtils.ts"), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../harp-vectortile-datasource/index.js":
+/*!**********************************************!*\
+  !*** ../harp-vectortile-datasource/index.js ***!
+  \**********************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+ * Copyright (C) 2019-2021 HERE Europe B.V.
+ * Licensed under Apache 2.0, see full license in LICENSE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * HERE OMV Data source.
+ *
+ * @remarks
+ *
+ * @packageDocumentation
+ */
+__exportStar(__webpack_require__(/*! ./lib/OmvDataFilter */ "../harp-vectortile-datasource/lib/OmvDataFilter.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/VectorTileDataSource */ "../harp-vectortile-datasource/lib/VectorTileDataSource.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/OmvDecoderDefs */ "../harp-vectortile-datasource/lib/OmvDecoderDefs.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/OmvDebugLabelsTile */ "../harp-vectortile-datasource/lib/OmvDebugLabelsTile.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/OmvRestClient */ "../harp-vectortile-datasource/lib/OmvRestClient.ts"), exports);
+__exportStar(__webpack_require__(/*! ./lib/GeoJsonDataProvider */ "../harp-vectortile-datasource/lib/GeoJsonDataProvider.ts"), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -27690,7 +27769,7 @@ exports.HelloWorldExample = void 0;
 const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const harp_map_controls_1 = __webpack_require__(/*! @here/harp-map-controls */ "../harp-map-controls/index.ts");
 const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
-const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
+const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.js");
 const config_1 = __webpack_require__(/*! ../config */ "./config.ts");
 /**
  * MapView initialization sequence enables setting all the necessary elements on a map  and returns
@@ -27961,7 +28040,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.FeaturesDataSource = void 0;
 const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
-const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
+const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("FeaturesDataSource");
 const NAME = "user-features-datasource";
 const DEFAULT_GEOJSON = {
@@ -36504,44 +36583,6 @@ function getWidthAndHeightFromCanvas(canvas) {
     };
 }
 exports.getWidthAndHeightFromCanvas = getWidthAndHeightFromCanvas;
-
-
-/***/ }),
-
-/***/ "../harp-mapview-decoder/index.ts":
-/*!****************************************!*\
-  !*** ../harp-mapview-decoder/index.ts ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * Decoder worker for {@ref MapView}.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./lib/DataProvider */ "../harp-mapview-decoder/lib/DataProvider.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/TileDataSource */ "../harp-mapview-decoder/lib/TileDataSource.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/TileLoader */ "../harp-mapview-decoder/lib/TileLoader.ts"), exports);
 
 
 /***/ }),
@@ -46594,8 +46635,8 @@ class PickHandler {
             }
         }
         // Intersect any objects added by the user.
-        intersects.length = 0;
         for (const child of this.mapView.mapAnchors.children) {
+            intersects.length = 0;
             rayCaster.intersectObject(child, true, intersects);
             for (const intersect of intersects) {
                 pickListener.addResult(this.createResult(intersect));
@@ -60339,7 +60380,7 @@ function overlayOnElevation(tile) {
     }
     // TODO: HARP-8808 Apply displacement maps once per material.
     for (const object of tile.objects) {
-        overlayObject(object, displacementMap.texture);
+        overlayObject(object, displacementMap);
     }
 }
 exports.overlayOnElevation = overlayOnElevation;
@@ -68058,7 +68099,8 @@ exports.hasDisplacementFeature = hasDisplacementFeature;
  */
 function setDisplacementMapToMaterial(displacementMap, material) {
     if (hasDisplacementFeature(material) && material.displacementMap !== displacementMap) {
-        material.displacementMap = displacementMap;
+        material.displacementMap = displacementMap === null || displacementMap === void 0 ? void 0 : displacementMap.texture;
+        material.displacementMapUvMatrix = displacementMap === null || displacementMap === void 0 ? void 0 : displacementMap.uvMatrix;
         material.needsUpdate = true;
         if (material.displacementMap !== null) {
             material.displacementMap.needsUpdate = true;
@@ -68139,7 +68181,7 @@ void main() {
     #endif
 
     #ifdef USE_DISPLACEMENTMAP 
-    transformed += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * uv).xy ).x;
+    transformed += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * vec3(uv,1.0)).xy ).x;
     #endif
 
     vec4 mvPosition = modelViewMatrix * vec4( transformed, 1.0 );
@@ -70107,12 +70149,26 @@ class MapMeshStandardMaterial extends THREE.MeshStandardMaterial {
         ExtrusionFeature.patchGlobalShaderChunks();
         this.addExtrusionProperties();
         this.applyExtrusionParameters(Object.assign(Object.assign({}, params), { zFightingWorkaround: true }));
-        if ((params === null || params === void 0 ? void 0 : params.removeDiffuseLight) === true) {
-            this.onBeforeCompile = harp_utils_1.chainCallbacks(this.onBeforeCompile, shaderParameters => {
-                const shader = shaderParameters;
+        let _this = this;
+        this.onBeforeCompile = harp_utils_1.chainCallbacks(this.onBeforeCompile, shaderParameters => {
+            const shader = shaderParameters;
+            if ((params === null || params === void 0 ? void 0 : params.removeDiffuseLight) === true) {
                 shader.fragmentShader = THREE.ShaderChunk.meshphysical_frag.replace("#include <lights_physical_pars_fragment>", ShadowChunks_1.simpleLightingShadowChunk);
-            });
-        }
+            }
+            shader.vertexShader = shader.vertexShader.replace("#include <displacementmap_pars_vertex>", `#ifdef USE_DISPLACEMENTMAP
+
+                uniform mat3 displacementUvMat;
+                uniform sampler2D displacementMap;
+                uniform float displacementScale;
+                uniform float displacementBias;
+            
+                #endif`);
+            shader.vertexShader = shader.vertexShader.replace("#include <displacementmap_vertex>", `#ifdef USE_DISPLACEMENTMAP 
+                transformed += normalize( objectNormal ) * ( texture2D( displacementMap, (displacementUvMat*vec3(uv,1.0)).xy ).x * displacementScale + displacementBias );
+                #endif`);
+            shader.uniforms.displacementUvMat = { value: _this.displacementMapUvMatrix || new THREE.Matrix3 };
+            _this.displacementUvMat = shader.uniforms.displacementUvMat;
+        });
     }
     // overrides with THREE.js base classes are not recognized by tslint.
     clone() {
@@ -70163,6 +70219,14 @@ class MapMeshStandardMaterial extends THREE.MeshStandardMaterial {
     /** @internal */
     set removeDiffuseLight(val) {
         // Stays empty.
+    }
+    set displacementMapUvMatrix(matrix) {
+        this.uVMat = matrix;
+        if (this.displacementUvMat)
+            this.displacementUvMat.value = matrix;
+    }
+    get displacementMapUvMatrix() {
+        return this.uVMat;
     }
     addFadingProperties() {
         // to be overridden
@@ -71287,6 +71351,7 @@ uniform vec2 drawRange;
 
 #ifdef USE_DISPLACEMENTMAP
 uniform sampler2D displacementMap;
+uniform mat3 displacementMapUvMatrix;
 #endif
 
 #ifdef USE_TILE_CLIP
@@ -71342,7 +71407,7 @@ void main() {
 
     // Transform position.
     #ifdef USE_DISPLACEMENTMAP
-    pos += normalize( normal ) * texture2D( displacementMap, uv ).x;
+    pos += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * vec3(uv,1.0)).xy ).x;
     #endif
 
     // Shift the line based on the offset, where the bitangent is the cross product of the average
@@ -71567,7 +71632,8 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
                         tileSize: new THREE.Uniform(new THREE.Vector2()),
                         fadeNear: new THREE.Uniform(MapMeshMaterials_1.FadingFeature.DEFAULT_FADE_NEAR),
                         fadeFar: new THREE.Uniform(MapMeshMaterials_1.FadingFeature.DEFAULT_FADE_FAR),
-                        displacementMap: new THREE.Uniform(displacementMap !== undefined ? displacementMap : new THREE.Texture()),
+                        displacementMap: new THREE.Uniform(displacementMap !== undefined ? displacementMap : new THREE.DataTexture(new ArrayBuffer(0), 0, 0)),
+                        displacementMapUvMatrix: new THREE.Uniform(params.displacementMapUvMatrix),
                         drawRange: new THREE.Uniform(new THREE.Vector2(SolidLineMaterial.DEFAULT_DRAW_RANGE_START, SolidLineMaterial.DEFAULT_DRAW_RANGE_END)),
                         dashSize: new THREE.Uniform(SolidLineMaterial.DEFAULT_DASH_SIZE),
                         gapSize: new THREE.Uniform(SolidLineMaterial.DEFAULT_GAP_SIZE)
@@ -71630,6 +71696,7 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
             }
             if (params.displacementMap !== undefined) {
                 this.displacementMap = params.displacementMap;
+                this.displacementMapUvMatrix = params.displacementMapUvMatrix;
             }
             if (params.caps !== undefined) {
                 this.caps = params.caps;
@@ -71837,6 +71904,12 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
             this.uniforms.displacementMap.value.needsUpdate = true;
         }
         Utils_1.setShaderMaterialDefine(this, "USE_DISPLACEMENTMAP", useDisplacementMap);
+    }
+    get displacementMapUvMatrix() {
+        return this.uniforms.displacementMapUvMatrix.value;
+    }
+    set displacementMapUvMatrix(matrix) {
+        this.uniforms.displacementMapUvMatrix.value = matrix;
     }
     get drawRangeStart() {
         return this.uniforms.drawRange.value.x;
@@ -78573,47 +78646,6 @@ exports.assertExists = assertExists;
 
 /***/ }),
 
-/***/ "../harp-vectortile-datasource/index.ts":
-/*!**********************************************!*\
-  !*** ../harp-vectortile-datasource/index.ts ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
- * Copyright (C) 2019-2021 HERE Europe B.V.
- * Licensed under Apache 2.0, see full license in LICENSE
- * SPDX-License-Identifier: Apache-2.0
- */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-/**
- * HERE OMV Data source.
- *
- * @remarks
- *
- * @packageDocumentation
- */
-__exportStar(__webpack_require__(/*! ./lib/OmvDataFilter */ "../harp-vectortile-datasource/lib/OmvDataFilter.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/VectorTileDataSource */ "../harp-vectortile-datasource/lib/VectorTileDataSource.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/OmvDecoderDefs */ "../harp-vectortile-datasource/lib/OmvDecoderDefs.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/OmvDebugLabelsTile */ "../harp-vectortile-datasource/lib/OmvDebugLabelsTile.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/OmvRestClient */ "../harp-vectortile-datasource/lib/OmvRestClient.ts"), exports);
-__exportStar(__webpack_require__(/*! ./lib/GeoJsonDataProvider */ "../harp-vectortile-datasource/lib/GeoJsonDataProvider.ts"), exports);
-
-
-/***/ }),
-
 /***/ "../harp-vectortile-datasource/lib/GeoJsonDataProvider.ts":
 /*!****************************************************************!*\
   !*** ../harp-vectortile-datasource/lib/GeoJsonDataProvider.ts ***!
@@ -78632,7 +78664,7 @@ exports.GeoJsonDataProvider = void 0;
 __webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
 const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
-const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.ts");
+const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.js");
 const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const OmvDecoderDefs_1 = __webpack_require__(/*! ./OmvDecoderDefs */ "../harp-vectortile-datasource/lib/OmvDecoderDefs.ts");
 const logger = harp_utils_1.LoggerManager.instance.create("GeoJsonDataProvider");
@@ -79586,7 +79618,7 @@ exports.GEOJSON_TILER_SERVICE_TYPE = "geojson-tiler";
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OmvRestClient = exports.AuthenticationTypeAccessToken = exports.AuthenticationTypeTomTomV1 = exports.AuthenticationTypeBearer = exports.AuthenticationMethod = exports.APIFormat = void 0;
 __webpack_require__(/*! @here/harp-fetch */ "../harp-fetch/index.web.js");
-const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.ts");
+const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.js");
 const harp_transfer_manager_1 = __webpack_require__(/*! @here/harp-transfer-manager */ "../harp-transfer-manager/index.js");
 const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const logger = harp_utils_1.LoggerManager.instance.create("OmvRestClient");
@@ -79949,7 +79981,7 @@ exports.VectorTileDataSource = void 0;
 const harp_datasource_protocol_1 = __webpack_require__(/*! @here/harp-datasource-protocol */ "../harp-datasource-protocol/index.js");
 const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
-const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.ts");
+const harp_mapview_decoder_1 = __webpack_require__(/*! @here/harp-mapview-decoder */ "../harp-mapview-decoder/index.js");
 const harp_utils_1 = __webpack_require__(/*! @here/harp-utils */ "../harp-utils/index.js");
 const OmvDecoderDefs_1 = __webpack_require__(/*! ./OmvDecoderDefs */ "../harp-vectortile-datasource/lib/OmvDecoderDefs.ts");
 const OmvRestClient_1 = __webpack_require__(/*! ./OmvRestClient */ "../harp-vectortile-datasource/lib/OmvRestClient.ts");

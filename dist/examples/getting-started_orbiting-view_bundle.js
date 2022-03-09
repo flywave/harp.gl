@@ -18,7 +18,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CameraOrbitExample = void 0;
 const harp_geoutils_1 = __webpack_require__(/*! @here/harp-geoutils */ "../harp-geoutils/index.js");
 const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
-const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
+const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.js");
 const dat_gui_1 = __webpack_require__(/*! dat.gui */ "../../node_modules/dat.gui/build/dat.gui.module.js");
 const Stats = __webpack_require__(/*! stats.js */ "../../node_modules/stats.js/build/stats.min.js");
 const config_1 = __webpack_require__(/*! ../config */ "./config.ts");

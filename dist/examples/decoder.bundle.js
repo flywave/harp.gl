@@ -14337,8 +14337,9 @@ class ClipEdge {
      *    | line-line intersection}.
      */
     computeIntersection(a, b) {
-        const result = new three_1.Vector2();
+        const result = new three_1.Vector3();
         harp_utils_1.Math2D.intersectLines(a.x, a.y, b.x, b.y, this.p0.x, this.p0.y, this.p1.x, this.p1.y, result);
+        result.z = a.z + (result.distanceTo(a) / a.distanceTo(b)) * (b.z - a.z);
         return result;
     }
     /**
@@ -14350,7 +14351,8 @@ class ClipEdge {
         lineString = [];
         result.push(lineString);
         const pushPoint = (point) => {
-            if (lineString.length === 0 || !lineString[lineString.length - 1].equals(point)) {
+            if (lineString.length === 0 ||
+                !lineString[lineString.length - 1].equals(point)) {
                 lineString.push(point);
             }
         };
@@ -14456,8 +14458,8 @@ function wrapMultiLineStringHelper(multiLineString, edges, offset) {
 function wrapLineString(coordinates) {
     const worldP = new three_1.Vector3();
     const lineString = coordinates.map(g => {
-        const { x, y } = harp_geoutils_1.webMercatorProjection.projectPoint(g, worldP);
-        return new three_1.Vector2(x, y);
+        const { x, y, z } = harp_geoutils_1.webMercatorProjection.projectPoint(g, worldP);
+        return new three_1.Vector3(x, y, z);
     });
     const multiLineString = [lineString];
     return {
@@ -20986,7 +20988,8 @@ exports.hasDisplacementFeature = hasDisplacementFeature;
  */
 function setDisplacementMapToMaterial(displacementMap, material) {
     if (hasDisplacementFeature(material) && material.displacementMap !== displacementMap) {
-        material.displacementMap = displacementMap;
+        material.displacementMap = displacementMap === null || displacementMap === void 0 ? void 0 : displacementMap.texture;
+        material.displacementMapUvMatrix = displacementMap === null || displacementMap === void 0 ? void 0 : displacementMap.uvMatrix;
         material.needsUpdate = true;
         if (material.displacementMap !== null) {
             material.displacementMap.needsUpdate = true;
@@ -21067,7 +21070,7 @@ void main() {
     #endif
 
     #ifdef USE_DISPLACEMENTMAP 
-    transformed += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * uv).xy ).x;
+    transformed += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * vec3(uv,1.0)).xy ).x;
     #endif
 
     vec4 mvPosition = modelViewMatrix * vec4( transformed, 1.0 );
@@ -23035,12 +23038,26 @@ class MapMeshStandardMaterial extends THREE.MeshStandardMaterial {
         ExtrusionFeature.patchGlobalShaderChunks();
         this.addExtrusionProperties();
         this.applyExtrusionParameters(Object.assign(Object.assign({}, params), { zFightingWorkaround: true }));
-        if ((params === null || params === void 0 ? void 0 : params.removeDiffuseLight) === true) {
-            this.onBeforeCompile = harp_utils_1.chainCallbacks(this.onBeforeCompile, shaderParameters => {
-                const shader = shaderParameters;
+        let _this = this;
+        this.onBeforeCompile = harp_utils_1.chainCallbacks(this.onBeforeCompile, shaderParameters => {
+            const shader = shaderParameters;
+            if ((params === null || params === void 0 ? void 0 : params.removeDiffuseLight) === true) {
                 shader.fragmentShader = THREE.ShaderChunk.meshphysical_frag.replace("#include <lights_physical_pars_fragment>", ShadowChunks_1.simpleLightingShadowChunk);
-            });
-        }
+            }
+            shader.vertexShader = shader.vertexShader.replace("#include <displacementmap_pars_vertex>", `#ifdef USE_DISPLACEMENTMAP
+
+                uniform mat3 displacementUvMat;
+                uniform sampler2D displacementMap;
+                uniform float displacementScale;
+                uniform float displacementBias;
+            
+                #endif`);
+            shader.vertexShader = shader.vertexShader.replace("#include <displacementmap_vertex>", `#ifdef USE_DISPLACEMENTMAP 
+                transformed += normalize( objectNormal ) * ( texture2D( displacementMap, (displacementUvMat*vec3(uv,1.0)).xy ).x * displacementScale + displacementBias );
+                #endif`);
+            shader.uniforms.displacementUvMat = { value: _this.displacementMapUvMatrix || new THREE.Matrix3 };
+            _this.displacementUvMat = shader.uniforms.displacementUvMat;
+        });
     }
     // overrides with THREE.js base classes are not recognized by tslint.
     clone() {
@@ -23091,6 +23108,14 @@ class MapMeshStandardMaterial extends THREE.MeshStandardMaterial {
     /** @internal */
     set removeDiffuseLight(val) {
         // Stays empty.
+    }
+    set displacementMapUvMatrix(matrix) {
+        this.uVMat = matrix;
+        if (this.displacementUvMat)
+            this.displacementUvMat.value = matrix;
+    }
+    get displacementMapUvMatrix() {
+        return this.uVMat;
     }
     addFadingProperties() {
         // to be overridden
@@ -24215,6 +24240,7 @@ uniform vec2 drawRange;
 
 #ifdef USE_DISPLACEMENTMAP
 uniform sampler2D displacementMap;
+uniform mat3 displacementMapUvMatrix;
 #endif
 
 #ifdef USE_TILE_CLIP
@@ -24270,7 +24296,7 @@ void main() {
 
     // Transform position.
     #ifdef USE_DISPLACEMENTMAP
-    pos += normalize( normal ) * texture2D( displacementMap, uv ).x;
+    pos += normalize( normal ) * texture2D( displacementMap, (displacementMapUvMatrix * vec3(uv,1.0)).xy ).x;
     #endif
 
     // Shift the line based on the offset, where the bitangent is the cross product of the average
@@ -24495,7 +24521,8 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
                         tileSize: new THREE.Uniform(new THREE.Vector2()),
                         fadeNear: new THREE.Uniform(MapMeshMaterials_1.FadingFeature.DEFAULT_FADE_NEAR),
                         fadeFar: new THREE.Uniform(MapMeshMaterials_1.FadingFeature.DEFAULT_FADE_FAR),
-                        displacementMap: new THREE.Uniform(displacementMap !== undefined ? displacementMap : new THREE.Texture()),
+                        displacementMap: new THREE.Uniform(displacementMap !== undefined ? displacementMap : new THREE.DataTexture(new ArrayBuffer(0), 0, 0)),
+                        displacementMapUvMatrix: new THREE.Uniform(params.displacementMapUvMatrix),
                         drawRange: new THREE.Uniform(new THREE.Vector2(SolidLineMaterial.DEFAULT_DRAW_RANGE_START, SolidLineMaterial.DEFAULT_DRAW_RANGE_END)),
                         dashSize: new THREE.Uniform(SolidLineMaterial.DEFAULT_DASH_SIZE),
                         gapSize: new THREE.Uniform(SolidLineMaterial.DEFAULT_GAP_SIZE)
@@ -24558,6 +24585,7 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
             }
             if (params.displacementMap !== undefined) {
                 this.displacementMap = params.displacementMap;
+                this.displacementMapUvMatrix = params.displacementMapUvMatrix;
             }
             if (params.caps !== undefined) {
                 this.caps = params.caps;
@@ -24765,6 +24793,12 @@ class SolidLineMaterial extends RawShaderMaterial_1.RawShaderMaterial {
             this.uniforms.displacementMap.value.needsUpdate = true;
         }
         Utils_1.setShaderMaterialDefine(this, "USE_DISPLACEMENTMAP", useDisplacementMap);
+    }
+    get displacementMapUvMatrix() {
+        return this.uniforms.displacementMapUvMatrix.value;
+    }
+    set displacementMapUvMatrix(matrix) {
+        this.uniforms.displacementMapUvMatrix.value = matrix;
     }
     get drawRangeStart() {
         return this.uniforms.drawRange.value.x;
@@ -30187,7 +30221,7 @@ function convertLineStringGeometry(coordinates, decodeInfo) {
     const untiledPositions = coordinates.map(geoPoint => {
         return harp_geoutils_1.GeoCoordinates.fromGeoPoint(geoPoint);
     });
-    const positions = coordinates.map(geoPoint => convertPoint(geoPoint, decodeInfo, new three_1.Vector2()));
+    const positions = coordinates.map(geoPoint => convertPoint(geoPoint, decodeInfo, new three_1.Vector3()));
     return { untiledPositions, positions };
 }
 function convertLineGeometry(geometry, decodeInfo) {
@@ -30244,7 +30278,7 @@ class GeoJsonDataAdapter {
                     geometry.forEach(g => {
                         const clipped = ClipLineString_1.clipLineString(g.positions, -DEFAULT_BORDER, -DEFAULT_BORDER, DEFAULT_EXTENTS + DEFAULT_BORDER, DEFAULT_EXTENTS + DEFAULT_BORDER);
                         clipped.forEach(positions => {
-                            clippedGeometries.push({ positions });
+                            clippedGeometries.push({ positions: positions });
                         });
                     });
                     geometry = clippedGeometries;

@@ -18,7 +18,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PickingExample = void 0;
 const harp_map_controls_1 = __webpack_require__(/*! @here/harp-map-controls */ "../harp-map-controls/index.ts");
 const harp_mapview_1 = __webpack_require__(/*! @here/harp-mapview */ "../harp-mapview/index.js");
-const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.ts");
+const harp_vectortile_datasource_1 = __webpack_require__(/*! @here/harp-vectortile-datasource */ "../harp-vectortile-datasource/index.js");
 const config_1 = __webpack_require__(/*! ../config */ "./config.ts");
 /**
  * This example showcases how picking works.
