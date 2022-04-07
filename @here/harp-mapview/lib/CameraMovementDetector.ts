@@ -63,11 +63,12 @@ export class CameraMovementDetector {
             this.m_lastAttitude = newAttitude;
             return false;
         }
+        const eps = 1e-6;
         const cameraMoved =
             !this.m_lastCameraPos.equals(newCameraPos) ||
-            newAttitude.yaw !== this.m_lastAttitude.yaw ||
-            newAttitude.pitch !== this.m_lastAttitude.pitch ||
-            newAttitude.roll !== this.m_lastAttitude.roll;
+            newAttitude.yaw - this.m_lastAttitude.yaw>=eps ||
+            newAttitude.pitch - this.m_lastAttitude.pitch>=eps ||
+            newAttitude.roll - this.m_lastAttitude.roll>=eps;
 
         if (cameraMoved) {
             this.m_lastCameraPos.copy(newCameraPos);
