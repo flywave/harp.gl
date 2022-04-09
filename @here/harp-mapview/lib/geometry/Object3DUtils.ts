@@ -111,6 +111,15 @@ export namespace Object3DUtils {
             material instanceof THREE.PointsMaterial
         ) {
             // Nothing to be done here
+        } else if (
+            material instanceof THREE.MeshLambertMaterial
+        ) {
+            const meshMaterial = material;
+            estimateTextureSize(meshMaterial.map, objectSize, visitedObjects);
+            estimateTextureSize(meshMaterial.aoMap, objectSize, visitedObjects);
+            estimateTextureSize(meshMaterial.specularMap, objectSize, visitedObjects);
+            estimateTextureSize(meshMaterial.alphaMap, objectSize, visitedObjects);
+            estimateTextureSize(meshMaterial.envMap, objectSize, visitedObjects);
         } else {
             logger.warn("estimateMeshSize: unidentified material: ", material);
         }
