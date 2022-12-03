@@ -733,13 +733,13 @@ export namespace MapViewUtils {
 
             //For flat projection we fallback to the target distance at 89 degree pitch.
             //For spherical projection we fallback to the tangent line distance
-            const distance =
-                projection.type === ProjectionType.Planar
-                    ? heightAboveTerrain / Math.cos(Math.min(cameraPitch, MAX_TILT_RAD))
-                    : Math.sqrt(
-                          Math.pow(heightAboveTerrain + EarthConstants.EQUATORIAL_RADIUS, 2) -
-                              Math.pow(EarthConstants.EQUATORIAL_RADIUS, 2)
-                      );
+            const distance =heightAboveTerrain / Math.cos(Math.min(cameraPitch, MAX_TILT_RAD))
+                // projection.type === ProjectionType.Planar
+                //     ? heightAboveTerrain / Math.cos(Math.min(cameraPitch, MAX_TILT_RAD))
+                //     : Math.sqrt(
+                //           Math.pow(heightAboveTerrain + EarthConstants.EQUATORIAL_RADIUS, 2) -
+                //               Math.pow(EarthConstants.EQUATORIAL_RADIUS, 2)
+                //       );
             const cameraDir = camera.getWorldDirection(cache.vector3[0]);
             cameraDir.multiplyScalar(distance);
             const fallbackTarget = cache.vector3[1];
