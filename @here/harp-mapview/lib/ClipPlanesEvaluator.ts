@@ -737,6 +737,7 @@ export class TiltViewClipPlanesEvaluator extends TopViewClipPlanesEvaluator {
               )
             : Infinity;
         const near = Math.min(bottomDist ?? Infinity, topDist ?? Infinity);
+        if(near == Infinity)return defaultNear;
         assert(near !== Infinity, "No reference point for near distance found");
         return near ?? defaultNear;
     }
